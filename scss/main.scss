@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import 'config';
+@import 'hero';
+@import 'header';
+@import 'logo';
+@import 'media';
+@import 'animations';
+
+body{
+    background: $bg-color;
+    font-family: 'Roboto', sans-serif;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+}
+
+.container {
+    width: 80%;
+    margin: 2rem auto;
+
+    p {
+        margin: 1rem 0;
+    }
+}

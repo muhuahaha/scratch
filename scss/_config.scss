@@ -1,0 +1,24 @@
+$primary-color: #005ca7;
+$secondary-color: #e50041;
+$yellow-color: #fedc01;
+$blanc-color: #fff;
+$noir-color: #1d1d1b;
+
+
+
+
+
+$bg-color: #fff;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+::-moz-selection { background: #111; color: #fff; }
+::selection { background: #111; color: #fff; }

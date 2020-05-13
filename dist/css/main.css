@@ -18,8 +18,6 @@
 
 .hero {
   height: 100vh;
-  background-color: #42A5F5;
-  background: url("../img/sky.jpg") no-repeat bottom center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,6 +30,8 @@
           align-items: center;
   padding: 0 10vw;
   color: white;
+  -webkit-animation: color-change-5x 25s linear 2s infinite alternate both;
+          animation: color-change-5x 25s linear 2s infinite alternate both;
 }
 
 .hero h1 {
@@ -45,7 +45,7 @@
 }
 
 .hero h1::before, .hero h1::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   height: 100%;
@@ -73,23 +73,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 65px;
+  height: 85px;
   width: 100vw;
   padding: 0 10vw;
-  color: #000;
+  color: #fff;
   z-index: 1;
-  -webkit-transition: .4s ease-out;
-  transition: .4s ease-out;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .main-header a {
   text-decoration: none;
   color: inherit;
-  text-transform: uppercase;
 }
 
 .main-header .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -99,7 +98,6 @@
   display: flex;
   list-style: none;
   padding: 5px;
-  background: rgba(254, 220, 0, 0.6);
 }
 
 .main-header .nav-links .active {
@@ -118,8 +116,8 @@
 }
 
 .main-header .nav-links .nav-link a {
-  margin: .2rem;
-  padding: 1rem .5rem;
+  margin: 0.2rem;
+  padding: 1rem 0.5rem;
 }
 
 .main-header .nav-links .nav-link a:hover {
@@ -144,14 +142,14 @@
 }
 
 .main-header .menu-icon__line::before, .main-header .menu-icon__line::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   border-radius: 4px;
   background: #000;
-  -webkit-transition: background .8s ease;
-  transition: background .8s ease;
+  -webkit-transition: background 0.8s ease;
+  transition: background 0.8s ease;
 }
 
 .main-header .menu-icon__line::before {
@@ -180,8 +178,8 @@
 }
 
 .main-header.scrolled {
-  height: 50px;
-  background: rgba(0, 0, 0, 0.9);
+  height: 89px;
+  background: #343a40;
   color: #fff;
 }
 
@@ -190,12 +188,12 @@
 }
 
 .main-header.scrolled .logo .fancy span.fade {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
   color: #fff;
   font-weight: bold;
-  -webkit-transition: .4s ease-out;
-  transition: .4s ease-out;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .fancy {
@@ -219,7 +217,7 @@
   margin-right: 2px;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  color: #e50041;
+  color: #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -531,21 +529,376 @@
   }
 }
 
+@-webkit-keyframes color-change-5x {
+  0% {
+    background: #19dcea;
+  }
+  25% {
+    background: #b22cff;
+  }
+  50% {
+    background: #ea2222;
+  }
+  75% {
+    background: #f5be10;
+  }
+  100% {
+    background: #3bd80d;
+  }
+}
+
+@keyframes color-change-5x {
+  0% {
+    background: #19dcea;
+  }
+  25% {
+    background: #b22cff;
+  }
+  50% {
+    background: #ea2222;
+  }
+  75% {
+    background: #f5be10;
+  }
+  100% {
+    background: #3bd80d;
+  }
+}
+
+.footer {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10vw;
+  color: white;
+  -webkit-animation: color-change-5x 25s linear 2s infinite alternate both;
+          animation: color-change-5x 25s linear 2s infinite alternate both;
+}
+
 body {
   background: #fff;
-  font-family: 'Roboto', sans-serif;
-  color: set-text-color(#005ca7);
+  font-family: "Roboto", sans-serif;
+  color: #000;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
 }
 
+span.anchorPos {
+  position: relative;
+  top: -123px;
+  visibility: hidden;
+}
+
+/* CSS Normalize */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201c \201d \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body,
+figure {
+  margin: 0;
+}
+
+legend,
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Box-sizing border-box */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Some default styles to make each box visible */
+.box {
+  color: white;
+  font-size: 100px;
+  text-align: center;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Colours for each box */
+.box1 {
+  background: #1abc9c;
+}
+
+.box2 {
+  background: #3498db;
+}
+
+.box3 {
+  background: #9b59b6;
+}
+
+.box4 {
+  background: #34495e;
+}
+
+.box5 {
+  background: #f1c40f;
+}
+
+.box6 {
+  background: #e67e22;
+}
+
+.box7 {
+  background: #e74c3c;
+}
+
+.box8 {
+  background: #bdc3c7;
+}
+
+.box9 {
+  background: #2ecc71;
+}
+
+.box10 {
+  background: #16a085;
+}
+
+.box11 {
+  background: #1abc9c;
+}
+
+.box22 {
+  background: #3498db;
+}
+
+.box33 {
+  background: #9b59b6;
+}
+
+.box44 {
+  background: #34495e;
+}
+
+.box55 {
+  background: #f1c40f;
+}
+
+.box66 {
+  background: #e67e22;
+}
+
+.box77 {
+  background: #e74c3c;
+}
+
+.box88 {
+  background: #bdc3c7;
+}
+
+.box99 {
+  background: #2ecc71;
+}
+
+.box100 {
+  background: #16a085;
+}
+
+/* We start writing out flexbox here. The above is just page setup */
 .container {
-  width: 80%;
-  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 10px solid goldenrod;
+  min-height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.container p {
-  margin: 1rem 0;
+.container1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 10px solid goldenrod;
+  min-height: 80vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.box {
+  width: 33.333333%;
+  padding: 10px;
 }
 /*# sourceMappingURL=main.css.map */

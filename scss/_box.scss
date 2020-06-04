@@ -61,21 +61,21 @@
 }
 
 .box1 {
-  flex: 1 2 30%;
+  flex: 5 1 33.333333%;
   img {
     width: 80%;
   }
 }
 
 .box2 {
-  flex: 1 5 33.33333%;
+  flex: 1 2 33.33333%;
 }
 
 .box3 {
-  flex: 1 5 33%;
+  flex: 1 2 33%;
 }
 .box8 {
-  flex: 0 0 66.6666666667%;
+  flex: 1 1 66.6666666667%;
   max-width: 66.6666666667%;
 }
 .box9 {
@@ -91,6 +91,47 @@
   width: 100%;
 
   font-size: 2rem;
+}
+
+@media all and (max-width: 1300px) {
+  .box {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    text-transform: uppercase;
+  }
+  .box1 {
+    order: 1;
+    flex: 1 1 50%;
+    img {
+      width: 50%;
+    }
+    clip-path: circle(170px at center);
+    background: lightsalmon;
+    transition: all 1s ease-in-out;
+  }
+  .box3 {
+    flex: 1 2 30%;
+    order: 12;
+  }
+  .box4 {
+    flex: 1 2 50%;
+    order: 8;
+  }
+  .box2 {
+    flex: 1 2 100%;
+    order: 2;
+  }
+  .box8 {
+    flex: 1 2 100%;
+    order: 11;
+  }
+  .box5 {
+    flex: 1 2 33.33333%;
+    order: 10;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -141,14 +182,15 @@
     order: 8;
   }
   .box8 {
-    .lp-25 {
-      font-size: 1.5rem;
-    }
+    // .lp-25 {
+    //   font-size: 1.5rem;
+    // }
     flex: 1 2 100%;
     order: 5;
+    font-size: 1rem;
   }
   .box5 {
-    flex: 1 2 20%;
+    flex: 1 2 100%;
     order: 10;
   }
   .box4 {

@@ -115,15 +115,16 @@
       padding-bottom: 50px;
     }
   }
-  .fs-70 {
-    font-size: 3rem;
-  }
+  // .fs-70 {
+  //   font-size: 3rem;
+  // }
 }
 
 @media (max-width: 767px) {
   .hero-container {
     max-width: 500px;
-    background: red;
+    // background: red;
+    margin-top: 10%;
     h1 {
       padding-bottom: 50px;
     }

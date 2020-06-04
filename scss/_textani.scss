@@ -1,0 +1,50 @@
+.run-animation {
+  position: relative;
+  animation: my-animation 3s ease;
+  animation-timing-function: ease-in-out;
+}
+
+.run-animation:after {
+  content: "";
+  animation-name: my-animation;
+  animation-duration: 3s;
+}
+
+@keyframes my-animation {
+  0%,
+  100% {
+    content: "😎";
+  }
+  10% {
+    content: "😜";
+  }
+  20% {
+    content: "👍";
+  }
+  30% {
+    content: "💪";
+    top: 0;
+  }
+  40% {
+    content: "HIRE";
+  }
+  50% {
+    content: "ME!";
+  }
+  60% {
+    content: "✌️";
+  }
+  70% {
+    content: "🍚";
+  }
+  80% {
+    content: "🚣";
+  }
+  90% {
+    content: "🚀";
+  }
+}
+
+#logo {
+  text-align: center;
+}

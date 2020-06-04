@@ -1,20 +1,18 @@
-
 .fancy {
-    position: relative;
-    text-align: center;
-    line-height: 10vh;
-    text-transform: uppercase;
-        span{
-            opacity: 0;
-            transition: all 1s ease;
-            transform: translateY(-50px);
-            display: inline-block;
-        }
-        span.fade {
-            opacity: 1;
-            margin-right: 2px;
-            transform: translateY(0);
-            color: $blanc-color;
-        }
+  position: relative;
+  text-align: center;
+  line-height: 10vh;
+  text-transform: uppercase;
+  span {
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateY(-50px);
+    display: inline-block;
+  }
+  span.fade {
+    opacity: 1;
+    margin-right: 2px;
+    transform: translateY(0);
+    color: $blanc-color;
+  }
 }
-

@@ -1,0 +1,30 @@
+.boxer {
+  width: 100px;
+  height: 100px;
+  background-color: #28a92b;
+  position: absolute;
+  left: 100px;
+  z-index: 100;
+  line-height: 100px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.a {
+  top: 2200px;
+  background-color: #8d3dae;
+}
+
+.b {
+  top: 2600px;
+}
+
+.c {
+  top: 3000px;
+  background-color: #e26c16;
+}
+
+.ghost {
+  top: 3000px;
+  background-color: #444;
+}

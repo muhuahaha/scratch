@@ -31,3 +31,8 @@ document.getElementById('myDIV').addEventListener('click', myFunction);
 function myFunction() {
   document.getElementById('menu-btn').checked = false;
 }
+
+document.getElementById('logo-btn').addEventListener('click', () => {
+  console.log('click');
+  document.getElementById('menu-btn').checked = false;
+});

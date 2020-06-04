@@ -1,15 +1,23 @@
+.container {
+  display: flex;
+  border: 10px solid goldenrod;
+  flex-wrap: wrap;
+}
+
 /* Some default styles to make each box visible */
 .box {
   color: white;
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
   padding: 10px;
+  text-transform: uppercase;
 }
 
 /* Colours for each box */
 .box1 {
   background: #1abc9c;
+  clip-path: circle(182px at center);
 }
 .box2 {
   background: #3498db;
@@ -22,6 +30,7 @@
 }
 .box5 {
   background: #f1c40f;
+  font-size: 1.7rem;
 }
 .box6 {
   background: #e67e22;
@@ -30,7 +39,8 @@
   background: #e74c3c;
 }
 .box8 {
-  background: #bdc3c7;
+  // background: #bdc3c7;
+  padding: 2rem;
 }
 .box9 {
   background: #2ecc71;
@@ -45,24 +55,28 @@
   background: #3498db;
 }
 
-/* We start writing out flexbox here. The above is just page setup */
-.container {
-  display: flex;
-  border: 10px solid goldenrod;
-  min-height: 100%;
-  flex-wrap: wrap;
-}
-
 .box {
-  // width: 33.3333333%;
+  width: 33.3333333%;
   flex: 1 0 250px;
 }
 
+.box1 {
+  flex: 1 2 30%;
+  img {
+    width: 80%;
+  }
+}
+
+.box2 {
+  flex: 1 5 33.33333%;
+}
+
 .box3 {
-  flex: 1 5 50%;
+  flex: 1 5 33%;
 }
 .box8 {
-  flex: 2 1 70%;
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
 }
 .box9 {
   flex: 5 1 30%;
@@ -73,8 +87,13 @@
 .box5 {
   flex-basis: 100px;
 }
+.box111 {
+  width: 100%;
 
-@media all and (max-width: 500px) {
+  font-size: 2rem;
+}
+
+@media all and (max-width: 767px) {
   /* Turn on flexbox */
   .container {
     display: flex;
@@ -95,9 +114,16 @@
   //     flex-basis: 500px;
   //     flex-grow: 1;
   //   }
-
   .box1 {
-    order: 4;
+    background: #e67e22;
+    clip-path: circle(168px at center);
+  }
+  .box1 {
+    order: 1;
+    flex: 1 2 100%;
+    img {
+      width: 80%;
+    }
   }
 
   //   /* Header */

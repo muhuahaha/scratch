@@ -145,9 +145,13 @@
       font-size: 1.5rem;
     }
     flex: 1 2 100%;
+    order: 5;
   }
   .box5 {
     flex: 1 2 20%;
     order: 10;
+  }
+  .box4 {
+    order: 2;
   }
 }

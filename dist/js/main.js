@@ -1,12 +1,16 @@
 const header = document.querySelector('.main-header');
 
 window.addEventListener('scroll', () => {
-  const scrollPos = window.scrollY;
+  let scrollPos = window.scrollY;
+  const currentScrollPos = window.scrollY;
   if (scrollPos > 10) {
     header.classList.add('scrolled');
+    document.getElementById('testtest').style.top = '0';
   } else {
     header.classList.remove('scrolled');
+    document.getElementById('testtest').style.top = '-89px';
   }
+  scrollPos = currentScrollPos;
 });
 
 // /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */

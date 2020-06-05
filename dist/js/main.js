@@ -9,16 +9,16 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// let prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-//   const currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById('testtest').style.top = '0';
-//   } else {
-//     document.getElementById('testtest').style.top = '-89px';
-//   }
-//   prevScrollpos = currentScrollPos;
-// };
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById('testtest').style.top = '0';
+  } else {
+    document.getElementById('testtest').style.top = '-89px';
+  }
+  prevScrollpos = currentScrollPos;
+};
 
 // const headerTest = document.getElementById('myDIV');
 // console.log(headerTest);

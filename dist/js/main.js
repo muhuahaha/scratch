@@ -9,17 +9,17 @@ window.addEventListener('scroll', () => {
   }
 });
 
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-let prevScrollpos = window.scrollY;
-window.onscroll = function() {
-  const currentScrollPos = window.scrollY;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById('testtest').style.top = '0';
-  } else {
-    document.getElementById('testtest').style.top = '-150px';
-  }
-  prevScrollpos = currentScrollPos;
-};
+// /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+// let prevScrollpos = window.scrollY;
+// window.onscroll = function() {
+//   const currentScrollPos = window.scrollY;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementById('testtest').style.top = '0';
+//   } else {
+//     document.getElementById('testtest').style.top = '-89px';
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
 
 const headerTest = document.getElementById('myDIV');
 console.log(headerTest);

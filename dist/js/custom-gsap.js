@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+gsap.config()({ autoKillThreshold: 1 });
+
 // --- RED PANEL ---
 gsap.from('.line-1', {
   scrollTrigger: {

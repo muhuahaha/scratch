@@ -9,6 +9,18 @@ window.addEventListener('scroll', () => {
   }
 });
 
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+let prevScrollpos = window.scrollY;
+window.onscroll = function() {
+  const currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById('testtest').style.top = '0';
+  } else {
+    document.getElementById('testtest').style.top = '-150px';
+  }
+  prevScrollpos = currentScrollPos;
+};
+
 const headerTest = document.getElementById('myDIV');
 console.log(headerTest);
 const btns = headerTest.getElementsByClassName('nav-link');
@@ -26,8 +38,6 @@ for (let i = 0; i < btns.length; i++) {
 
 // console.log(check);
 
-document.getElementById('myDIV').addEventListener('click', myFunction);
-
 function myFunction() {
   document.getElementById('menu-btn').checked = false;
 }
@@ -36,3 +46,4 @@ document.getElementById('logo-btn').addEventListener('click', () => {
   console.log('click');
   document.getElementById('menu-btn').checked = false;
 });
+document.getElementById('myDIV').addEventListener('click', myFunction);

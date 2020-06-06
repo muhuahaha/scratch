@@ -1,11 +1,15 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+ScrollTrigger.defaults({
+  toggleActions: 'restart pause resume pause',
+});
+
 // --- RED PANEL ---
 gsap.from('.line-1', {
   scrollTrigger: {
     trigger: '.line-1',
     scrub: true,
-    start: 'top bottom',
+    start: 'top top',
     end: 'top top',
   },
   scaleX: 0,
@@ -72,3 +76,48 @@ gsap.utils.toArray('.nav-link a').forEach(function(a) {
 // 			scrollFunc(scrollProgress * ScrollTrigger.maxScroll(window));
 // 		}
 // 	}
+
+// const anim = gsap.from('.portfolio-img', {
+//   opacity: 0,
+//   x: -1000,
+//   rotation: 360,
+// });
+
+// ScrollTrigger.create({
+//   trigger: '.gray',
+//   animation: anim,
+//   // Uncomment these to see how they affect the ScrollTrigger
+//   markers: true,
+//   start: 'top top',
+//   end: 'top top',
+//   toggleClass: 'active',
+//   // pin: true,
+//   scrub: 1,
+
+//   onUpdate: self => {
+//     console.log('progress:', self.progress.toFixed(3), 'direction:', self.direction, 'velocity', self.getVelocity());
+//   },
+// });
+
+const tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.gray',
+    // scrub: 0.5,
+    pin: true,
+    start: 'top top',
+    end: 'top bottom',
+  },
+});
+
+tl2.from('.portfolio-img', {
+  opacity: 0,
+  x: -1000,
+  scale: 0.3,
+  rotation: 45,
+  autoAlpha: 0,
+  ease: 'slow',
+
+  stagger: 0.1,
+});
+// .from('.portfolio-img', { ease: 'bounce', stagger: 1.5, delay: 0.5 }, 0)
+// .to('.portfolio-img', { backgroundColor: '#28a92b', stagger: 1.5, delay: 1 }, 0);

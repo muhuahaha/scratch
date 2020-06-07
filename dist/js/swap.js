@@ -17,14 +17,56 @@ const images = [
   'img/ava11.png',
 ];
 
-function randomHover() {
+function randomHover() {}
+
+const test1 = document.getElementById('hover');
+
+test1.addEventListener('mouseenter', event => {
   const myImage = document.getElementById('hover');
   const selImage = randomPick(images);
 
   myImage.src = selImage;
-}
+});
 
-function resetState() {
+const test2 = document.getElementById('hover');
+
+test2.addEventListener('mouseleave', event => {
   const myImage = document.getElementById('hover');
   myImage.src = 'img/ava1.png';
-}
+});
+
+// const test = document.getElementById('hover');
+
+// window.addEventListener(
+//   'load',
+//   event => {
+//     const myImage = document.getElementById('hover');
+
+//     setTimeout(function() {
+//       const selImage = randomPick(images);
+//       myImage.src = selImage;
+//     }, 5000);
+
+//     setTimeout(function() {
+//       myImage.src = 'img/ava1.png';
+//     }, 7000);
+//   },
+//   false
+// );
+
+// test.addEventListener(
+//   'load',
+//   event => {
+//     const myImage = document.getElementById('hover');
+
+//     setTimeout(function() {
+//       const selImage = randomPick(images);
+//       myImage.src = selImage;
+//     }, 7000);
+
+//     setTimeout(function() {
+//       myImage.src = 'img/ava1.png';
+//     }, 9000);
+//   },
+//   false
+// );

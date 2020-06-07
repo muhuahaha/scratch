@@ -16,6 +16,7 @@
 @import "panel";
 @import "portfolio";
 @import "about1";
+
 body {
   background: #040c26;
   // font-family: "Montserrat", sans-serif;
@@ -37,4 +38,18 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
+}
+
+.monster {
+  width: 190px;
+  height: 240px;
+  margin: 2% auto;
+  background: url("../img/monster.png") left center;
+  animation: play 10s steps(10) infinite;
+}
+
+@keyframes play {
+  100% {
+    background-position: -1900px;
+  }
 }

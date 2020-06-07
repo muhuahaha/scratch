@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../scss/sprite.scss"
+    ],
+    "names": [],
+    "file": "sprite.css"
+}

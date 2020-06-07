@@ -1,5 +1,28 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+gsap.set('#demo', { scale: 1 });
+
+const test3 = document.getElementById('hover');
+
+gsap
+  .timeline()
+  .from('#demo', { duration: 1, opacity: 0 })
+
+  .from('#ava', { opacity: 0, xPercent: 100, rotation: 180, duration: 0.2, ease: 'bounce' })
+  .from('#time1', { opacity: 0, xPercent: 100, rotation: 45, stagger: 0.1, duration: 0.2, ease: 'back' })
+  .set(test3, { attr: { src: 'img/ava11.png' } })
+  .from('#time2', { opacity: 0, xPercent: 100, rotation: 0.2, duration: 1, ease: 'back' })
+  .set(test3, { attr: { src: 'img/ava1.png' } })
+  .from('#title', { opacity: 0, ease: 'back', rotation: 180 })
+  .to(test3, { rotation: 5, duration: 1, ease: 'back' })
+  .from('#time3', { opacity: 0, xPercent: 100, rotation: 45, duration: 0.2, ease: 'back' })
+  .from('#time4', { opacity: 0, xPercent: 100, rotation: 180, duration: 0.2, ease: 'back' })
+
+  .from('#time4 span', { opacity: 0, xPercent: 100, stagger: 0.5, rotation: 45, duration: 0.2, ease: 'back' })
+  .from('.freds', { opacity: 0, y: 160, duration: 0.8, ease: 'bounce' })
+  .set(test3, { attr: { src: 'img/ava3.png', duration: 1, ease: 'back' } })
+  .from('.freds img', { opacity: 0, y: 160, rotation: 45, stagger: 0.5, duration: 0.2, ease: 'bounce' });
+
 ScrollTrigger.defaults({
   toggleActions: 'restart pause resume pause',
 });
@@ -53,71 +76,23 @@ gsap.utils.toArray('.nav-link a').forEach(function(a) {
   });
 });
 
-// possible solution for old iOS bugs that don't display things inside an iframe correctly. Create a --full-height CSS variable and use it instead of height: 100%
-// function readHeight() {
-// 		if (ScrollTrigger.isScrolling()) {
-// 			console.log("wait until end...");
-// 			ScrollTrigger.addEventListener("scrollEnd", readHeight);
-// 		} else {
-// 			ScrollTrigger.removeEventListener("scrollEnd", readHeight);
-// 			window.removeEventListener("resize", readHeight);
-// 			let scrollFunc = ScrollTrigger.getScrollFunc(window),
-// 				scrollProgress = scrollFunc() / ScrollTrigger.maxScroll(window),
-// 				docStyle = document.documentElement.style,
-// 				bodyStyle = document.body.style;
-// 			bodyStyle.overflow = "auto";
-// 			docStyle.setProperty("--full-height", "100%");
-// 			docStyle.setProperty("--full-height", window.innerHeight + "px");
-// 			bodyStyle.overflow = "unset";
-// 			setTimeout(function() {
-// 				window.addEventListener("resize", readHeight);
-// 			}, 500);
-// 			ScrollTrigger.refresh(true);
-// 			scrollFunc(scrollProgress * ScrollTrigger.maxScroll(window));
-// 		}
-// 	}
-
-// const anim = gsap.from('.portfolio-img', {
-//   opacity: 0,
-//   x: -1000,
-//   rotation: 360,
-// });
-
-// ScrollTrigger.create({
-//   trigger: '.gray',
-//   animation: anim,
-//   // Uncomment these to see how they affect the ScrollTrigger
-//   markers: true,
-//   start: 'top top',
-//   end: 'top top',
-//   toggleClass: 'active',
-//   // pin: true,
-//   scrub: 1,
-
-//   onUpdate: self => {
-//     console.log('progress:', self.progress.toFixed(3), 'direction:', self.direction, 'velocity', self.getVelocity());
-//   },
-// });
-
 const tl2 = gsap.timeline({
   scrollTrigger: {
     trigger: '.gray',
-    // scrub: 0.5,
+    scrub: 0.5,
     pin: true,
     start: 'top top',
-    end: 'top bottom',
+    end: 'top top',
+    markers: true,
   },
 });
 
-tl2.from('.portfolio-img', {
+tl2.from('.portfolio-item', {
   opacity: 0,
   x: -1000,
   scale: 0.3,
   rotation: 45,
   autoAlpha: 0,
   ease: 'slow',
-
-  stagger: 0.1,
+  stagger: 0.5,
 });
-// .from('.portfolio-img', { ease: 'bounce', stagger: 1.5, delay: 0.5 }, 0)
-// .to('.portfolio-img', { backgroundColor: '#28a92b', stagger: 1.5, delay: 1 }, 0);

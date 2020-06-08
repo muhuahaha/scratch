@@ -14,18 +14,30 @@ button {
 .introduction {
   flex: 1;
 }
-.intro-text h1 {
-  font-size: 44px;
-  font-weight: 500;
-  color: white;
-  background: linear-gradient(to right, #6f6f89, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+.intro-label {
+  margin-bottom: 0;
+  font: 500 14px/22px Roboto Mono, monospace;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
+
+.intro-text h3 {
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 300;
+  color: white;
+  margin-top: 16px;
+  position: relative;
+  top: -4px;
+  letter-spacing: -0.01em;
+}
+
 .intro-text p {
-  margin-top: 5px;
-  font-size: 22px;
-  color: #585772;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.5em;
+  margin: 0.4em 0 0.5em;
 }
 
 .cta {
@@ -129,4 +141,3 @@ button {
     opacity: 0.2;
   }
 }
-

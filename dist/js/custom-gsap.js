@@ -32,7 +32,7 @@ gsap.from('.line-1', {
   scrollTrigger: {
     trigger: '.line-1',
     scrub: true,
-    start: 'top top',
+    start: 'top bottom',
     end: 'top top',
   },
   scaleX: 0,
@@ -66,7 +66,7 @@ const tl = gsap.timeline({
 });
 
 tl.from('.purple p', { scale: 0.3, rotation: 45, autoAlpha: 0, ease: 'power2' })
-  .from('.line-3', { scaleX: 0, backgroundColor: '#28a92b', transformOrigin: 'left center', ease: 'none' }, 0)
+  .from('.line-3', { scaleX: 0, transformOrigin: 'left center', ease: 'none' }, 0)
   .to('.purple', { backgroundColor: '#28a92b' }, 0);
 
 gsap.utils.toArray('.nav-link a').forEach(function(a) {
@@ -83,7 +83,7 @@ const tl2 = gsap.timeline({
     pin: true,
     start: 'top top',
     end: 'top top',
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -95,4 +95,24 @@ tl2.from('.portfolio-item', {
   autoAlpha: 0,
   ease: 'slow',
   stagger: 0.5,
+});
+
+function init() {
+  gsap.from('#project01', {
+    opacity: 0,
+    duration: 10,
+    x: -550,
+    ease: 'back',
+    scrollTrigger: {
+      trigger: '.gray',
+      scrub: true,
+      start: 'top bottom-=100',
+      end: 'bottom bottom-=400',
+      markers: true,
+    },
+  });
+}
+
+window.addEventListener('load', function() {
+  init();
 });

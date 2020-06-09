@@ -129,7 +129,7 @@
   flex: 1 0 25%;
 }
 
-@media all and (max-width: 1400px) {
+@media all and (max-width: 1500px) {
   .box {
     color: white;
     font-size: 2rem;
@@ -209,7 +209,7 @@
   .box2 {
     order: 2;
     flex: 1 0 100%;
-    clip-path: circle(120px at center);
+    clip-path: circle(110px at center);
     img {
       width: 90%;
     }

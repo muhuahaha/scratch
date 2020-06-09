@@ -6,26 +6,32 @@ const test3 = document.getElementById('hover');
 
 gsap
   .timeline()
-  .from('#demo', { duration: 1, opacity: 0 })
-
-  .from('#ava', { opacity: 0, xPercent: 100, rotation: 180, duration: 0.2, ease: 'bounce' })
-  .from('#time1', { opacity: 0, xPercent: 100, rotation: 45, stagger: 0.1, duration: 0.2, ease: 'back' })
-  .set(test3, { attr: { src: 'img/ava11.png' } })
-  .from('#time2', { opacity: 0, xPercent: 100, rotation: 0.2, duration: 1, ease: 'back' })
-  .set(test3, { attr: { src: 'img/ava1.png' } })
+  .from('#demo', { duration: 2, opacity: 0 })
+  .from('#time1', { opacity: 0, x: -450, rotation: 5, duration: 0.1, ease: 'back' })
   .from('#title', { opacity: 0, ease: 'back', rotation: 180 })
-  .to(test3, { rotation: 5, duration: 1, ease: 'back' })
-  .from('#time3', { opacity: 0, xPercent: 100, rotation: 45, duration: 0.2, ease: 'back' })
-  .from('#time4', { opacity: 0, xPercent: 100, rotation: 180, duration: 0.2, ease: 'back' })
+  .from('#time2', { opacity: 0, x: -450, rotation: 5, duration: 0.1, ease: 'back' })
+  .from('#ava', { opacity: 0, x: -450, rotation: 180, duration: 0.1, ease: 'back' })
+  .from('#time3', { opacity: 0, x: -450, rotation: 5, duration: 0.1, ease: 'back' })
+  .from('#time4', { opacity: 0, x: -450, rotation: 5, stagger: 0.1, duration: 0.2, ease: 'back' })
+  .from('#time5', { opacity: 0, x: -450, rotation: 5, duration: 0.1, ease: 'back' })
+  .from('.freds', { opacity: 0, x: -450, rotation: 5, duration: 0.1, ease: 'back' })
+  .from('.freds img', {
+    opacity: 0,
+    y: 160,
+    rotation: 45,
+    stagger: { each: 0.2, from: 'random', ease: 'power2.inOut' },
+    duration: 0.2,
+    ease: 'bounce',
+  })
 
-  .from('#time4 span', { opacity: 0, xPercent: 100, stagger: 0.5, rotation: 45, duration: 0.2, ease: 'back' })
-  .from('.freds', { opacity: 0, y: 160, duration: 0.8, ease: 'bounce' })
-  .set(test3, { attr: { src: 'img/ava3.png', duration: 1, ease: 'back' } })
-  .from('.freds img', { opacity: 0, y: 160, rotation: 45, stagger: 0.5, duration: 0.2, ease: 'bounce' });
+  .set(test3, { attr: { src: 'img/svg/ava01.svg' } })
+  // .to(test3, { rotation: 5, duration: 1, ease: 'back' })
+  .set(test3, { attr: { src: 'img/svg/ava11.svg', duration: 10, delay: 10 } })
 
-ScrollTrigger.defaults({
-  toggleActions: 'restart pause resume pause',
-});
+  .from('#time6', { opacity: 0, x: -450, rotation: 5, duration: 0.1, ease: 'back' })
+  .from('#time6 span', { opacity: 0, x: -450, stagger: 0.5, rotation: 45, duration: 0.2, ease: 'back' })
+
+  .set(test3, { attr: { src: 'img/svg/ava01.svg', duration: 1, ease: 'back' } });
 
 // --- RED PANEL ---
 gsap.from('.line-1', {
@@ -104,11 +110,11 @@ function init() {
     x: -550,
     ease: 'back',
     scrollTrigger: {
-      trigger: '.gray',
+      trigger: '#project01',
       scrub: true,
-      start: 'top bottom-=100',
-      end: 'bottom bottom-=400',
-      markers: true,
+      start: 'top -=200',
+      end: 'top +=600',
+      // markers: true,
     },
   });
 }

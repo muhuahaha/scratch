@@ -4,6 +4,8 @@
 @import "hero";
 @import "header";
 @import "logo";
+@import "avatar";
+@import "newMain";
 @import "media";
 @import "animations";
 @import "footer";
@@ -15,8 +17,8 @@
 @import "panel";
 @import "portfolio";
 @import "about1";
-@import "newMain";
 
+@import "bg_stripes";
 body {
   background: #040c26;
   font-family: "Roboto", sans-serif;
@@ -61,10 +63,9 @@ h5 {
   font-weight: 800;
 }
 h6 {
-  font-size: 60px;
+  font-size: 18px;
   font-weight: 600;
 }
-
-hr.dotted {
-  border-top: 3px dotted #bbb;
+hr.solid {
+  border-top: 3px solid #bbb;
 }

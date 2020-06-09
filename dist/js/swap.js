@@ -5,16 +5,17 @@ function randomPick(arr) {
 }
 
 const images = [
-  'img/ava2.png',
-  'img/ava3.png',
-  'img/ava4.png',
-  'img/ava5.png',
-  'img/ava6.png',
-  'img/ava7.png',
-  'img/ava8.png',
-  'img/ava9.png',
-  'img/ava10.png',
-  'img/ava11.png',
+  'img/svg/ava02.svg',
+  'img/svg/ava03.svg',
+  'img/svg/ava04.svg',
+  'img/svg/ava05.svg',
+  'img/svg/ava06.svg',
+  'img/svg/ava07.svg',
+  'img/svg/ava08.svg',
+  'img/svg/ava09.svg',
+  'img/svg/ava11.svg',
+  'img/svg/ava12.svg',
+  'img/svg/ava13.svg',
 ];
 
 function randomHover() {}
@@ -32,7 +33,7 @@ const test2 = document.getElementById('hover');
 
 test2.addEventListener('mouseleave', event => {
   const myImage = document.getElementById('hover');
-  myImage.src = 'img/ava1.png';
+  myImage.src = 'img/svg/ava01.svg';
 });
 
 // const test = document.getElementById('hover');

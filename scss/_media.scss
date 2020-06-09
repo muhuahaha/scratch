@@ -121,15 +121,12 @@
 }
 
 @media (max-width: 767px) {
-  .hero-container {
-    max-width: 500px;
-    // background: red;
-    margin-top: 10%;
+  .container {
+    // max-width: 500px;
+    margin-top: 40%;
+    border: 10px solid #fff;
     h1 {
       padding-bottom: 50px;
     }
-  }
-  .fs-70 {
-    font-size: 5rem;
   }
 }

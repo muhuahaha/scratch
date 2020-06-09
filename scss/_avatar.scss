@@ -1,0 +1,19 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  // background: black;
+  background: rgba(255, 255, 255, 0.5);
+  clip-path: circle(170px at center);
+
+  img {
+    width: 70%;
+  }
+}
+
+.avatar1 {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 10%;
+  }
+}

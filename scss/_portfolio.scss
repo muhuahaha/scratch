@@ -301,6 +301,15 @@
     margin-bottom: 10px;
     transform: translateX(-1500px);
   }
+  .avatar {
+    // background: black;
+    background: rgba(255, 255, 255, 0);
+    clip-path: circle(170px at center);
+    transition: all 1s ease-in-out;
+    img {
+      width: 80%;
+    }
+  }
 }
 
 @media (max-width: 575px) {

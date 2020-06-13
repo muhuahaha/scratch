@@ -78,7 +78,7 @@ const tl = gsap.timeline({
     trigger: '.purple',
     scrub: true,
     pin: true,
-    start: '-=20px',
+    start: 'top top',
     end: '+=100%',
     // toggleActions: 'play none reverse reset',
     markers: true,

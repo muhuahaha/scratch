@@ -1687,7 +1687,6 @@ button {
   font-weight: 300;
   text-align: left;
   font-size: 0.7em;
-  line-height: 1.5em;
   margin: 0.3em 0 1em 0;
   max-width: 800px;
 }
@@ -2076,6 +2075,16 @@ button {
     margin-bottom: 10px;
     -webkit-transform: translateX(-1500px);
             transform: translateX(-1500px);
+  }
+  .avatar {
+    background: rgba(255, 255, 255, 0);
+    -webkit-clip-path: circle(170px at center);
+            clip-path: circle(170px at center);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+  .avatar img {
+    width: 80%;
   }
 }
 

@@ -1,0 +1,75 @@
+.boxes {
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #2d2d2d;
+}
+
+.boxe {
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/face-bg.svg);
+}
+
+.hermanWrapper {
+  background: #2d2d2d;
+  display: flex;
+  color: white;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.quote {
+  font-size: 1.8em;
+  margin-left: 40px;
+}
+.nav {
+  height: 80px;
+  display: flex;
+  background: black;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue {
+  background-color: #6699fc;
+}
+
+.pink {
+  background-color: #f69;
+}
+
+.yellow {
+  background-color: #ffcc33;
+}
+
+.demo {
+  visibility: hidden;
+}
+
+.flex-grid {
+  display: flex;
+}
+.flex-grid .col {
+  flex: 1;
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-thirds .col {
+  width: 10%;
+}
+#circles {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}

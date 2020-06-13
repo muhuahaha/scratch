@@ -43,7 +43,7 @@
   background: #bdc3c7;
 }
 .box9 {
-  background: #2ecc71;
+  // background: #2ecc71;
 }
 .box10 {
   background: #16a085;
@@ -87,22 +87,21 @@
 
 .box5 {
   align-self: center;
-  flex: 1 0 50%;
-  img {
-    width: 10%;
-  }
+  flex: 1 0 100%;
 }
 .box6 {
-  flex: 1 0 50%;
+  flex: 1 0 100%;
 }
 .box7 {
   flex: 1 0 100%;
 }
 .box8 {
-  flex: 1 0 50%;
+  flex: 1 0 100%;
 }
 .box9 {
-  flex: 1 0 50%;
+  flex: 1 0 100%;
+
+  min-height: 800px;
 }
 .box10 {
   flex: 1 0 30%;
@@ -118,9 +117,11 @@
 }
 .box14 {
   flex: 1 0 25%;
+  margin-right: 2rem;
 }
 .box15 {
   flex: 1 0 25%;
+  margin-right: 2rem;
 }
 .box16 {
   flex: 1 0 25%;
@@ -231,6 +232,16 @@
   }
   .box6 {
     order: 6;
+    flex: 1 0 100%;
+  }
+
+  .box14 {
+    flex: 1 0 100%;
+  }
+  .box15 {
+    flex: 1 0 100%;
+  }
+  .box16 {
     flex: 1 0 100%;
   }
 }

@@ -30,7 +30,7 @@ test1.addEventListener('mouseenter', event => {
 
   const selText = randomPick(txt);
 
-  document.getElementById('yoo').innerText = `${selText} , hire me!`;
+  document.getElementById('yoo').innerText = `${selText}`;
   myImage.src = selImage;
 });
 

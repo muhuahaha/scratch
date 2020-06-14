@@ -304,11 +304,26 @@
   .avatar {
     // background: black;
     background: rgba(255, 255, 255, 0);
-    clip-path: circle(170px at center);
+    clip-path: circle(150px at center);
     transition: all 1s ease-in-out;
     img {
-      width: 80%;
+      width: 90%;
     }
+  }
+  .container1 {
+    width: 90%;
+    // width: 90%;
+    display: flex;
+    min-height: 100vh;
+    margin-top: 20px;
+    margin: auto;
+    // border: 20px solid #fff;
+    // min-width: 1520px;
+    padding: 0 15px;
+    flex-grow: 1;
+    // margin: 0 auto;
+    max-width: 1300px;
+    /* background-color: lightgray; */
   }
 }
 

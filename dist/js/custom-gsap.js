@@ -81,7 +81,7 @@ const tl = gsap.timeline({
     start: 'top top',
     end: '+=100%',
     // toggleActions: 'play none reverse reset',
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -180,43 +180,6 @@ animation.add(blueAni.tweenFromTo(0, blueAni.duration()));
 btn.addEventListener('click', () => {
   animation.restart();
 });
-
-const phrases = ['Happy', 'New Year', 'to all', 'who believe', 'in', 'new', 'years', '😍'];
-const demo = document.querySelector('.demo');
-const animation1 = gsap.timeline({
-  repeat: 1,
-  repeatDelay: 10,
-  scrollTrigger: {
-    trigger: '.orange',
-    // scrub: true,
-    // pin: true,
-    start: 'top top',
-    end: '+=100%',
-  },
-});
-
-function createLayers() {
-  phrases.forEach(value => {
-    const layer = document.createElement('div');
-    layer.innerHTML = value;
-    demo.appendChild(layer);
-  });
-}
-
-function animateText() {
-  const layers = document.querySelectorAll('.demo div');
-  layers.forEach(function(element, index) {
-    animation1.fromTo(
-      element,
-      { opacity: 0, scale: 0 },
-      { scale: 1, opacity: 1, repeat: 1, yoyo: true, yoyoEase: true, repeatDelay: 0.3 }
-    );
-  });
-  gsap.set('.demo', { visibility: 'visible' });
-}
-
-createLayers();
-animateText();
 
 gsap.from('.testtest', {
   scrollTrigger: {

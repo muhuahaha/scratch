@@ -1128,9 +1128,9 @@ input::-moz-focus-inner {
     background: #e67e22;
   }
   .box1 {
-    -webkit-box-ordinal-group: 8;
-        -ms-flex-order: 7;
-            order: 7;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
     -webkit-box-flex: 1;
         -ms-flex: 1 2 100%;
             flex: 1 2 100%;
@@ -1160,9 +1160,9 @@ input::-moz-focus-inner {
     font-size: 2rem;
   }
   .box4 {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
@@ -1295,7 +1295,6 @@ input::-moz-focus-inner {
   /* iOS braucht das */
   white-space: nowrap;
   overflow: hidden;
-  font-size: 2rem;
   /* hier evtl. noch font-size, color usw. */
 }
 
@@ -2078,13 +2077,28 @@ button {
   }
   .avatar {
     background: rgba(255, 255, 255, 0);
-    -webkit-clip-path: circle(170px at center);
-            clip-path: circle(170px at center);
+    -webkit-clip-path: circle(150px at center);
+            clip-path: circle(150px at center);
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
   .avatar img {
-    width: 80%;
+    width: 90%;
+  }
+  .container1 {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    margin-top: 20px;
+    margin: auto;
+    padding: 0 15px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 1300px;
+    /* background-color: lightgray; */
   }
 }
 

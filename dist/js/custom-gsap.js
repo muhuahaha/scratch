@@ -80,7 +80,7 @@ const tl = gsap.timeline({
     pin: true,
     start: 'top top',
     end: '+=100%',
-    // toggleActions: 'play none reverse reset',
+    toggleActions: 'play none none reverse',
     // markers: true,
   },
 });
@@ -89,18 +89,19 @@ tl.from('.purple h3', { scale: 0.3, rotation: 45, autoAlpha: 0, ease: 'power2' }
   .from('.line-3', { scaleX: 0, transformOrigin: 'left center', ease: 'none' }, 0)
   .to('.purple', { backgroundColor: '#040c26', opacity: 1 }, 0)
   // .from('.portfolio .portfolio-item-inner', {
+  //   y: 260,
   //   opacity: 0,
-  //   stagger: { each: 0.5, ease: 'power2.inOut' },
+  //   stagger: { each: 0.1, ease: 'power2.inOut' },
   //   duration: 0.3,
   //   ease: 'back',
   // })
   .from('.purple .portfolio-img img', {
     opacity: 0,
-    y: -260,
+    y: 260,
     rotation: 5,
-    stagger: { each: 0.1, from: 'random', ease: 'power2.inOut' },
-    duration: 0.5,
-    ease: 'bounce',
+    stagger: { each: 0.2, from: 'start', ease: 'power2.inOut' },
+    duration: 0.3,
+    ease: 'back',
   });
 
 gsap.utils.toArray('.nav-link a').forEach(function(a) {
@@ -185,7 +186,7 @@ gsap.fromTo(
     x: xEnd,
     scrollTrigger: {
       trigger: '.wrapper',
-      scrub: 0.5,
+      scrub: 0.3,
     },
     ease: 'none',
     opacity: 1,
@@ -198,21 +199,21 @@ gsap.registerPlugin(TextPlugin);
 const tl2 = gsap.timeline({
   scrollTrigger: {
     trigger: '#test6',
-    // scrub: 1.5,
+    // scrub: 5,
     // pin: true,
     start: '-=500',
     end: '-=500',
     toggleActions: 'play none none reverse',
-    // markers: true,
+    markers: true,
   },
 });
 
 tl2
-  .to('#test6', { y: -100, color: 'white', text: 'YTK', scale: 0.7, duration: 1 })
-  .to('.red', { backgroundColor: '#040c26', duration: 1, delay: 1 })
-  .to('#test6', { color: 'white', text: 'WTF', scale: 2, duration: 0.5 })
-  .to('#test6', { color: 'white', text: 'OMG', scale: 1, duration: 0.5 })
-  .to('#test6', { color: 'white', text: 'YTK', scale: 1, duration: 0.5 })
-  .to('#test6', { color: 'white', text: 'READY TO GO', scale: 1.5, duration: 1 })
-  .to('#test6', { color: 'white', text: 'YES', scale: 1.5, duration: 0.5 })
-  .to('#test6', { color: 'white', text: 'LET#S GO', scale: 1.2, duration: 1 });
+  .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 0.7, duration: 1 })
+  .to('.red', { backgroundColor: '#040c26', duration: 0.5 })
+  .to('#test6', { y: 20, color: 'white', text: 'WTF', scale: 2, duration: 0.5 })
+  .to('#test6', { y: 20, color: 'white', text: 'OMG', scale: 1, duration: 0.5 })
+  .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 1, duration: 0.5 })
+  .to('#test6', { y: 20, color: 'white', text: 'READY TO GO', scale: 1.5, duration: 1 })
+  .to('#test6', { y: 20, color: 'white', text: 'YES', scale: 1.5, duration: 0.5 })
+  .to('#test6', { y: 20, color: 'white', text: 'LET#S GO', scale: 1.2, duration: 1 });

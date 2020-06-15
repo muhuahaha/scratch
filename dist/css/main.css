@@ -1627,6 +1627,24 @@ button {
   left: 40%;
 }
 
+.demo-wrapper {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.demo-text .text {
+  font-size: clamp(8rem, 10vw, 15rem);
+  line-height: 1;
+  font-weight: 900;
+  color: white;
+  padding-top: 50px;
+}
+
 .line {
   width: 100%;
   max-width: 1400px;

@@ -110,27 +110,6 @@ gsap.utils.toArray('.nav-link a').forEach(function(a) {
   });
 });
 
-const tl2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.gray',
-    scrub: 0.5,
-    pin: true,
-    start: 'top top',
-    end: 'top top',
-    // markers: true,
-  },
-});
-
-// tl2.from('.portfolio-item', {
-//   opacity: 0,
-//   x: -1000,
-//   scale: 0.3,
-//   rotation: 45,
-//   autoAlpha: 0,
-//   ease: 'slow',
-//   stagger: 0.5,
-// });
-
 function init() {
   gsap.from('#project01', {
     opacity: 0,
@@ -194,30 +173,42 @@ gsap.from('.testtest', {
   ease: 'power2',
 });
 
-// --- GREEN PANEL ---
-gsap.from('.line-green', {
+const w = document.querySelector('.wrapper');
+console.log(w);
+const index = 1;
+const [x, xEnd] = index % 2 ? ['100%', (w.scrollWidth - w.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
+console.log(x);
+gsap.fromTo(
+  w,
+  { x, y: 100 },
+  {
+    x: xEnd,
+    scrollTrigger: {
+      trigger: '.wrapper',
+      scrub: 0.5,
+    },
+    ease: 'none',
+  }
+);
+
+gsap.registerPlugin(TextPlugin);
+
+const tl2 = gsap.timeline({
   scrollTrigger: {
-    trigger: '.line-green',
-    start: 'top center',
-    end: 'top 100px',
-    toggleActions: 'play pause resume pause',
+    trigger: '#test6',
+    scrub: 1.5,
+    // pin: true,
+    start: 'top +=450',
+    end: 'top +=400',
+    toggleActions: 'play none none none',
+    // markers: true,
   },
-  scaleX: 0,
-  duration: 10,
-  repeat: -1,
-  transformOrigin: 'left center',
-  ease: 'none',
 });
 
-// --- ORANGE PANEL ---
-gsap.from('.line-orange', {
-  scrollTrigger: {
-    trigger: '.line-orange',
-    toggleActions: 'play complete reverse reset',
-  },
-  scaleX: 0,
-  duration: 10,
-  repeat: -1,
-  transformOrigin: 'left center',
-  ease: 'none',
-});
+tl2
+  .to('#test6', { y: -50, color: 'white', text: 'YTK', scale: 0.7, duration: 10 })
+  .to('.red', { backgroundColor: '#040c26', duration: 10 })
+  .to('#test6', { y: -50, color: 'white', text: 'WTF', scale: 2, delay: 10, duration: 2 })
+  .to('#test6', { y: -50, color: 'white', text: 'OMG', scale: 1, delay: 10, duration: 5 })
+  .to('#test6', { y: -50, color: 'white', text: 'YTK', scale: 1, delay: 10, duration: 5 })
+  .to('#test6', { y: -50, color: 'white', text: 'READY TO GO', scale: 1, delay: 10, duration: 5 });

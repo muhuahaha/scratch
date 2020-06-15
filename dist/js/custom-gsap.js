@@ -180,13 +180,12 @@ const [x, xEnd] = index % 2 ? ['100%', (w.scrollWidth - w.offsetWidth) * -1] : [
 console.log(x);
 gsap.fromTo(
   w,
-  { x, opacity: 0 },
+  { xPercent: 100, opacity: 0 },
   {
     x: xEnd,
     scrollTrigger: {
       trigger: '.wrapper',
       scrub: 0.5,
-
     },
     ease: 'none',
     opacity: 1,
@@ -205,53 +204,15 @@ const tl2 = gsap.timeline({
     end: '-=500',
     toggleActions: 'play none none reverse',
     // markers: true,
-  }
-
+  },
 });
 
 tl2
-  .to('#test6', { y: -100,color: 'white', text: 'YTK', scale: 0.7, duration: 1 })
-  .to('.red', { backgroundColor: '#040c26', duration: 1 })
+  .to('#test6', { y: -100, color: 'white', text: 'YTK', scale: 0.7, duration: 1 })
+  .to('.red', { backgroundColor: '#040c26', duration: 1, delay: 1 })
   .to('#test6', { color: 'white', text: 'WTF', scale: 2, duration: 0.5 })
-  .to('#test6', { color: 'white', text: 'OMG', scale: 1,  duration: 0.5 })
-  .to('#test6', { color: 'white', text: 'YTK', scale: 1,  duration: 0.5 })
-  .to('#test6', { color: 'white', text: 'READY TO GO', scale: 1.2,  duration: 2 });
-
-
-
-  console.clear();
-
-let lastTime;
-
-function fadeIn() {
-  lastTime = Date.now();
-
-  const objsToFadeIn = [];
-  document.querySelectorAll('.card:not(.loaded)').forEach(card => {
-    if(card.offsetTop < scrollY + innerHeight) {
-      objsToFadeIn.push(card);
-    }
-  });
-
-  if(objsToFadeIn.length) {
-    gsap.set(objsToFadeIn, {className: "card mr-3 mb-3 loaded"});
-    gsap.to(objsToFadeIn, {autoAlpha: 1, stagger: 0.1});
-  }
-}
-
-function onScroll() {
-  // If more than 50ms has passed since last fade, fade in
-  if(Date.now() - 50 > lastTime) {
-    fadeIn();
-  }
-}
-
-function init() {
-  lastTime = Date.now();
-
-  document.addEventListener("scroll", onScroll);
-
-  fadeIn();
-}
-
-init();
+  .to('#test6', { color: 'white', text: 'OMG', scale: 1, duration: 0.5 })
+  .to('#test6', { color: 'white', text: 'YTK', scale: 1, duration: 0.5 })
+  .to('#test6', { color: 'white', text: 'READY TO GO', scale: 1.5, duration: 1 })
+  .to('#test6', { color: 'white', text: 'YES', scale: 1.5, duration: 0.5 })
+  .to('#test6', { color: 'white', text: 'LET#S GO', scale: 1.2, duration: 1 });

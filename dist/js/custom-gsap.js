@@ -80,7 +80,7 @@ const tl = gsap.timeline({
     pin: true,
     start: 'top top',
     end: '+=100%',
-    toggleActions: 'play none none reverse',
+    // toggleActions: 'play none reverse reset',
     // markers: true,
   },
 });
@@ -89,19 +89,18 @@ tl.from('.purple h3', { scale: 0.3, rotation: 45, autoAlpha: 0, ease: 'power2' }
   .from('.line-3', { scaleX: 0, transformOrigin: 'left center', ease: 'none' }, 0)
   .to('.purple', { backgroundColor: '#040c26', opacity: 1 }, 0)
   // .from('.portfolio .portfolio-item-inner', {
-  //   y: 260,
   //   opacity: 0,
-  //   stagger: { each: 0.1, ease: 'power2.inOut' },
+  //   stagger: { each: 0.5, ease: 'power2.inOut' },
   //   duration: 0.3,
   //   ease: 'back',
   // })
   .from('.purple .portfolio-img img', {
     opacity: 0,
-    y: 260,
+    y: -260,
     rotation: 5,
-    stagger: { each: 0.2, from: 'start', ease: 'power2.inOut' },
-    duration: 0.3,
-    ease: 'back',
+    stagger: { each: 0.1, from: 'random', ease: 'power2.inOut' },
+    duration: 0.5,
+    ease: 'bounce',
   });
 
 gsap.utils.toArray('.nav-link a').forEach(function(a) {
@@ -110,6 +109,27 @@ gsap.utils.toArray('.nav-link a').forEach(function(a) {
     gsap.to(window, { duration: 1, scrollTo: e.target.getAttribute('href') });
   });
 });
+
+const tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.gray',
+    scrub: 0.5,
+    pin: true,
+    start: 'top top',
+    end: 'top top',
+    // markers: true,
+  },
+});
+
+// tl2.from('.portfolio-item', {
+//   opacity: 0,
+//   x: -1000,
+//   scale: 0.3,
+//   rotation: 45,
+//   autoAlpha: 0,
+//   ease: 'slow',
+//   stagger: 0.5,
+// });
 
 function init() {
   gsap.from('#project01', {
@@ -174,46 +194,19 @@ gsap.from('.testtest', {
   ease: 'power2',
 });
 
-const w = document.querySelector('.wrapper');
-console.log(w);
-const index = 1;
-const [x, xEnd] = index % 2 ? ['100%', (w.scrollWidth - w.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
-console.log(x);
-gsap.fromTo(
-  w,
-  { xPercent: 100, opacity: 0 },
-  {
-    x: xEnd,
-    scrollTrigger: {
-      trigger: '.wrapper',
-      scrub: 0.3,
-    },
-    ease: 'none',
-    opacity: 1,
-    scale: 0.8,
-  }
-);
-
-gsap.registerPlugin(TextPlugin);
-
-const tl2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#test6',
-    // scrub: 5,
-    // pin: true,
-    start: '-=500',
-    end: '-=500',
-    toggleActions: 'play none none reverse',
-    markers: true,
-  },
+gsap.utils.toArray('section').forEach((section, index) => {
+  const w = document.querySelector('.wrapper');
+  console.log(w);
+  const [x, xEnd] = index % 2 ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
+  gsap.fromTo(
+    w,
+    { x },
+    {
+      x: xEnd,
+      scrollTrigger: {
+        trigger: section,
+        scrub: 0.5,
+      },
+    }
+  );
 });
-
-tl2
-  .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 0.7, duration: 1 })
-  .to('.red', { backgroundColor: '#040c26', duration: 0.5 })
-  .to('#test6', { y: 20, color: 'white', text: 'WTF', scale: 2, duration: 0.5 })
-  .to('#test6', { y: 20, color: 'white', text: 'OMG', scale: 1, duration: 0.5 })
-  .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 1, duration: 0.5 })
-  .to('#test6', { y: 20, color: 'white', text: 'READY TO GO', scale: 1.5, duration: 1 })
-  .to('#test6', { y: 20, color: 'white', text: 'YES', scale: 1.5, duration: 0.5 })
-  .to('#test6', { y: 20, color: 'white', text: 'LET#S GO', scale: 1.2, duration: 1 });

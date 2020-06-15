@@ -1627,22 +1627,16 @@ button {
   left: 40%;
 }
 
-.demo-wrapper {
-  overflow-x: hidden;
-}
-
-.wrapper {
+.demo-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .demo-text .text {
-  font-size: clamp(8rem, 10vw, 15rem);
+  font-size: clamp(8rem, 15vw, 16rem);
   line-height: 1;
   font-weight: 900;
-  color: white;
-  padding-top: 50px;
 }
 
 .line {
@@ -1940,7 +1934,7 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #040c26;
+  background-color: rgba(4, 12, 38, 0.6);
   z-index: 100;
   display: none;
   -ms-flex-align: center;

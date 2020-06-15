@@ -204,7 +204,7 @@ const tl2 = gsap.timeline({
     start: '-=500',
     end: '-=500',
     toggleActions: 'play none none reverse',
-    markers: true,
+    // markers: true,
   },
 });
 

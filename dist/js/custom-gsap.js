@@ -201,19 +201,19 @@ const tl2 = gsap.timeline({
     trigger: '#test6',
     // scrub: 5,
     // pin: true,
-    start: '-=500',
+    start: '-=450',
     end: '-=500',
-    toggleActions: 'play none none reverse',
+    toggleActions: 'restart none none reverse',
     // markers: true,
   },
 });
 
 tl2
-  .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 0.7, duration: 1 })
+  .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 0.7, duration: 1, delay: 1 })
   .to('.red', { backgroundColor: '#040c26', duration: 0.5 })
   .to('#test6', { y: 20, color: 'white', text: 'WTF', scale: 2, duration: 0.5 })
   .to('#test6', { y: 20, color: 'white', text: 'OMG', scale: 1, duration: 0.5 })
   .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 1, duration: 0.5 })
-  .to('#test6', { y: 20, color: 'white', text: 'READY TO GO', scale: 1.5, duration: 1 })
-  .to('#test6', { y: 20, color: 'white', text: 'YES', scale: 1.5, duration: 0.5 })
-  .to('#test6', { y: 20, color: 'white', text: 'LET#S GO', scale: 1.2, duration: 1 });
+  .to('#test6', { y: 20, color: 'white', text: 'READY TO GO?', scale: 1.5, duration: 1 })
+  .to('#test6', { y: 20, color: 'white', text: 'YES', scale: 1.5, duration: 1 })
+  .to('#test6', { y: 20, color: 'white', text: 'LET#S GO!', scale: 1.2, duration: 1 });

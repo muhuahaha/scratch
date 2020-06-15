@@ -79,7 +79,9 @@
 }
 
 .demo-text .text {
-  font-size: clamp(8rem, 15vw, 16rem);
+  font-size: clamp(4rem, 15vw, 8rem);
   line-height: 1;
   font-weight: 900;
+  color: white;
+  padding-top: 50px;
 }

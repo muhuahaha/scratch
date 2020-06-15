@@ -11,13 +11,13 @@ const test3 = document.getElementById('hover');
 gsap
   .timeline()
   .from('#demo', { duration: 1, opacity: 0 })
-  .from('#time1', { opacity: 0, x: -450, rotation: 5, duration: 0.8, ease: 'back' })
+  .from('#time1', { opacity: 0, x: -450, rotation: 5, duration: 0.2, ease: 'back' })
   .from('#title', { opacity: 0, ease: 'back', rotation: 5 })
-  .from('#time2', { opacity: 0, x: -850, rotation: 5, duration: 0.1, ease: 'back' })
+  .from('#time2', { opacity: 0, x: -850, rotation: 5, duration: 0.2, ease: 'back' })
   .from('#ava', { opacity: 0, x: 450, rotation: 45, ease: 'bounce' })
-  .from('#time3', { opacity: 0, x: -450, rotation: 5, duration: 0.8, ease: 'back' })
-  .from('#time4', { opacity: 0, y: -450, rotation: 5, duration: 1.5, ease: 'bounce' })
-  .from('#time5', { opacity: 0, x: -450, rotation: 5, duration: 0.8, ease: 'back' })
+  .from('#time3', { opacity: 0, x: -450, rotation: 5, duration: 0.2, ease: 'back' })
+  .from('#time4', { opacity: 0, y: -450, rotation: 5, duration: 0.2, ease: 'bounce' })
+  .from('#time5', { opacity: 0, x: -450, rotation: 5, duration: 0.2, ease: 'back' })
 
   .from('.freds', { opacity: 0, x: -450, rotation: 5, duration: 0.8, ease: 'back' })
   .from('.freds img', {
@@ -214,6 +214,18 @@ tl2
   .to('#test6', { y: 20, color: 'white', text: 'WTF', scale: 2, duration: 0.5 })
   .to('#test6', { y: 20, color: 'white', text: 'OMG', scale: 1, duration: 0.5 })
   .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 1, duration: 0.5 })
-  .to('#test6', { y: 20, color: 'white', text: 'READY TO GO?', scale: 1.5, duration: 1 })
-  .to('#test6', { y: 20, color: 'white', text: 'YES', scale: 1.5, duration: 1 })
+  .to('#test6', { y: 20, color: 'white', text: 'READY TO GO?', scale: 1.2, duration: 1 })
+  .to('#test6', { y: 20, color: 'white', text: 'YES OK', scale: 1.2, duration: 1 })
   .to('#test6', { y: 20, color: 'white', text: 'LET#S GO!', scale: 1.2, duration: 1 });
+
+const tl123 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.dark',
+    start: 'center bottom',
+    toggleActions: 'restart none none reverse',
+  },
+});
+
+tl123
+  .from('.iTest img', { xPercent: '100', opacity: 0, duration: 1.5 })
+  .from('.content1', { y: 800, opacity: 0, duration: 1 }, '-=1');

@@ -1641,6 +1641,42 @@ button {
   padding-top: 50px;
 }
 
+section {
+  height: 100vh;
+}
+
+.dark {
+  text-align: left;
+  color: white;
+  position: relative;
+}
+
+.iTest img {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.content1 {
+  padding: 9em 10%;
+  z-index: 1;
+  position: absolute;
+}
+
+.content1 h2 {
+  font-size: 5em;
+  margin-bottom: 0;
+}
+
+.content1 p {
+  font-size: 1.6em;
+}
+
 .line {
   width: 100%;
   max-width: 1400px;
@@ -1936,7 +1972,7 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(4, 12, 38, 0.6);
+  background-color: #040c26;
   z-index: 100;
   display: none;
   -ms-flex-align: center;
@@ -2351,14 +2387,10 @@ button {
 }
 
 body {
-  background: #040c26;
   font-family: "Roboto", sans-serif;
   height: 100%;
   line-height: 1.5;
   background-color: #040c26;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.07) 2px, transparent 2px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;

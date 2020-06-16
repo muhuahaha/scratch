@@ -146,3 +146,49 @@
     top: calc(50vh - 20%);
   }
 }
+
+#container DIV {
+  .box {
+    height: 550px;
+    margin: 50px;
+    padding: 50px;
+
+    // background-color: #1cff07;
+  }
+}
+
+.hideme {
+}
+
+.df {
+  display: -webkit-box;
+  display: flex;
+}
+.aic {
+  -webkit-box-align: center;
+  align-items: center;
+}
+.jcc {
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  color: white;
+  z-index: 999;
+}
+
+.demo-wrapper {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: flex;
+}

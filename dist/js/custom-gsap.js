@@ -291,3 +291,21 @@ ScrollTrigger.create({
   animation: tl_rotate,
   toggleActions: 'play none none reverse',
 });
+
+const targets = document.querySelectorAll('#container div');
+
+targets.forEach(target => {
+  const tl1234 = gsap
+    .timeline({
+      defaults: { duration: 1 },
+      scrollTrigger: {
+        trigger: target,
+        scrub: true,
+        start: 'center 80%',
+        end: 'center 20%',
+      },
+    })
+    .fromTo(target, { y: 50 }, { y: -50 })
+    .from(target, { opacity: 0, duration: 0.2 }, 0)
+    .to(target, { opacity: 0, duration: 0.2 }, 0.8);
+});

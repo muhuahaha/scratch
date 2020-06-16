@@ -888,10 +888,6 @@ input::-moz-focus-inner {
   background: #e74c3c;
 }
 
-.box8 {
-  background: #bdc3c7;
-}
-
 .box10 {
   background: #16a085;
 }
@@ -974,6 +970,10 @@ input::-moz-focus-inner {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
+}
+
+.box8 img {
+  width: 28%;
 }
 
 .box9 {
@@ -1686,6 +1686,7 @@ button {
   width: 100px;
   height: 100px;
   background-color: #4343f3;
+  border-radius: 50%;
   position: absolute;
   left: 10%;
   top: calc(50vh - 100px);

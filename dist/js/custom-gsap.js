@@ -85,9 +85,9 @@ const tl = gsap.timeline({
 });
 
 tl.from('.purple h2', { yPercent: 200, autoAlpha: 0 })
-  .from('.line-3', { scaleX: 0, transformOrigin: 'left center', ease: 'none', duration: 0.2 }, 0)
-  .from('.portfolio-filter button', { yPercent: 200, autoAlpha: 0, duration: 0.5, stagger: 0.1 })
-  .from('.portfolio-item-inner', { yPercent: 200, autoAlpha: 0, duration: 0.5, stagger: 0.1 })
+  .from('.line-3', { scaleX: 0, transformOrigin: 'left center', ease: 'none', duration: 0.3 }, 0)
+  .from('.portfolio-filter button', { yPercent: 200, autoAlpha: 0, duration: 0.3, stagger: 0.1 })
+  .from('.portfolio-item-inner', { yPercent: 200, autoAlpha: 0, duration: 0.2, stagger: 0.1 })
   .to('.purple', { backgroundColor: '#040c26', opacity: 1 }, 0)
   // .from('.portfolio .portfolio-item-inner', {
   //   y: 260,
@@ -199,7 +199,7 @@ gsap.registerPlugin(TextPlugin);
 const tl2 = gsap.timeline({
   scrollTrigger: {
     trigger: '#test6',
-    // scrub: 3,
+    // scrub: 5,
     // pin: true,
     start: '-=450',
     end: '-=500',
@@ -260,6 +260,16 @@ tl_move.fromTo('.box55', { xPercent: -10 }, { x: '+=500%', duration: 1, scale: 2
 const tl_rotate = gsap.timeline();
 tl_rotate.fromTo('.box55', { rotation: 0 }, { rotation: 360, duration: 1 });
 
+// tl rotate
+const tl_test = gsap.timeline();
+tl_rotate
+  .fromTo(
+    '.box55',
+    { rotation: 0 },
+    { xPercent: 50, yPercent: 50, scale: 0.5, rotation: 360, duration: 1, backgroundColor: 'yellow', autoAlpha: 1 }
+  )
+  .to('.box55', { backgroundColor: 'black' });
+
 ScrollTrigger.create({
   // pin element
   trigger: '#first',
@@ -290,6 +300,15 @@ ScrollTrigger.create({
   trigger: '#first',
   start: '66% center',
   animation: tl_rotate,
+  toggleActions: 'play none none reverse',
+});
+
+ScrollTrigger.create({
+  // test animation
+  trigger: '#first',
+  start: 'top top',
+  end: '33% center',
+  animation: tl_test,
   toggleActions: 'play none none reverse',
 });
 

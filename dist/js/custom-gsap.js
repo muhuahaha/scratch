@@ -18,16 +18,15 @@ gsap
   .from('#time3', { opacity: 0, x: -450, rotation: 5, duration: 0.2, ease: 'back' })
   .from('#time4', { opacity: 0, y: -450, rotation: 5, duration: 0.2, ease: 'bounce' })
   .from('#time5', { opacity: 0, x: -450, rotation: 5, duration: 0.2, ease: 'back' })
-
-  .from('.freds', { opacity: 0, x: -450, rotation: 5, duration: 0.8, ease: 'back' })
-  .from('.freds img', {
-    opacity: 0,
-    y: 160,
-    rotation: 45,
-    stagger: { each: 0.2, ease: 'bounce' },
-    duration: 0.2,
-    ease: 'bounce',
-  })
+  // .from('.freds', { opacity: 0, x: -450, rotation: 5, duration: 0.8, ease: 'back' })
+  // .from('.freds img', {
+  //   opacity: 0,
+  //   y: 160,
+  //   rotation: 45,
+  //   stagger: { each: 0.2, ease: 'bounce' },
+  //   duration: 0.2,
+  //   ease: 'bounce',
+  // })
 
   .set(test3, { attr: { src: 'img/svg/ava01.svg' } })
   // .to(test3, { rotation: 5, duration: 1, ease: 'back' })
@@ -76,17 +75,19 @@ gsap.from('.line-2', {
 const tl = gsap.timeline({
   scrollTrigger: {
     trigger: '.purple',
-    scrub: true,
+    // scrub: 3,
     pin: true,
-    start: 'top top',
+    start: 'top +=50',
     end: '+=100%',
     toggleActions: 'play none none reverse',
-    // markers: true,
+    markers: true,
   },
 });
 
-tl.from('.purple h3', { scale: 0.3, rotation: 45, autoAlpha: 0, ease: 'power2' })
-  .from('.line-3', { scaleX: 0, transformOrigin: 'left center', ease: 'none' }, 0)
+tl.from('.purple h2', { yPercent: 200, autoAlpha: 0 })
+  .from('.line-3', { scaleX: 0, transformOrigin: 'left center', ease: 'none', duration: 0.2 }, 0)
+  .from('.portfolio-filter button', { yPercent: 200, autoAlpha: 0, duration: 0.5, stagger: 0.1 })
+  .from('.portfolio-item-inner', { yPercent: 200, autoAlpha: 0, duration: 0.5, stagger: 0.1 })
   .to('.purple', { backgroundColor: '#040c26', opacity: 1 }, 0)
   // .from('.portfolio .portfolio-item-inner', {
   //   y: 260,
@@ -160,9 +161,9 @@ btn.addEventListener('click', () => {
   animation.restart();
 });
 
-gsap.from('.testtest', {
+gsap.from('#testtest', {
   scrollTrigger: {
-    trigger: '.testtest',
+    trigger: '.demo',
     scrub: true,
     start: 'top bottom',
     end: 'top +=200',
@@ -198,7 +199,7 @@ gsap.registerPlugin(TextPlugin);
 const tl2 = gsap.timeline({
   scrollTrigger: {
     trigger: '#test6',
-    // scrub: 5,
+    // scrub: 3,
     // pin: true,
     start: '-=450',
     end: '-=500',

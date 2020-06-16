@@ -1689,6 +1689,7 @@ button {
   position: absolute;
   left: 10%;
   top: calc(50vh - 100px);
+  color: white;
 }
 
 @media all and (max-width: 767px) {
@@ -1705,35 +1706,6 @@ button {
   height: 550px;
   margin: 50px;
   padding: 50px;
-}
-
-.df {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.aic {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-.jcc {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: black;
-  color: white;
-  z-index: 999;
 }
 
 .demo-wrapper {

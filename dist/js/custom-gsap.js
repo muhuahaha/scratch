@@ -249,11 +249,11 @@ console.log(tl_height);
 
 // tl fade in
 const tl_fadein = gsap.timeline();
-tl_fadein.fromTo('.box55', { autoAlpha: 0, y: '+=50' }, { autoAlpha: 1, y: 0, duration: 1 });
+tl_fadein.fromTo('.box55', { autoAlpha: 0, y: '-=500' }, { autoAlpha: 1, y: 0, duration: 1 });
 
 // tl move to right
 const tl_move = gsap.timeline();
-tl_move.fromTo('.box55', { x: '-=100' }, { x: '+=400', duration: 1 });
+tl_move.fromTo('.box55', { xPercent: -10 }, { x: '+=500%', duration: 1, scale: 2 });
 
 // tl rotate
 const tl_rotate = gsap.timeline();

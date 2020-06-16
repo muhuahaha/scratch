@@ -112,18 +112,17 @@ gsap.utils.toArray('.nav-link a').forEach(function(a) {
 });
 
 function init() {
-  gsap.from('#project01', {
+  gsap.from('#project01 div', {
     opacity: 0,
-    duration: 10,
-    x: -550,
+    duration: 0.5,
+    yPercent: 100,
     ease: 'back',
     scrollTrigger: {
       trigger: '#project01',
-      scrub: true,
-      start: 'top -=200',
-      end: 'top +=600',
-      // markers: true,
+      // scrub: true,
+      markers: true,
     },
+    stagger: { each: 0.2, ease: 'bounce' },
   });
 }
 

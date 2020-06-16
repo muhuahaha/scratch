@@ -1641,10 +1641,6 @@ button {
   padding-top: 50px;
 }
 
-section {
-  height: 100vh;
-}
-
 .dark {
   text-align: left;
   color: white;
@@ -1684,10 +1680,6 @@ section {
 
 #second {
   background-color: #43f343;
-}
-
-.pin-element {
-  position: relative;
 }
 
 .box55 {

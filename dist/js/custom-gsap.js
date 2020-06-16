@@ -209,7 +209,7 @@ const tl2 = gsap.timeline({
 });
 
 tl2
-  .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 0.7, duration: 1, delay: 1 })
+  .to('#test6', { y: 20, color: 'white', text: 'YTK', scale: 0.7, duration: 1, delay: 0.5 })
   .to('.red', { backgroundColor: '#040c26', duration: 0.5 })
   .to('#test6', { y: 20, color: 'white', text: 'WTF', scale: 2, duration: 0.5 })
   .to('#test6', { y: 20, color: 'white', text: 'OMG', scale: 1, duration: 0.5 })
@@ -227,5 +227,5 @@ const tl123 = gsap.timeline({
 });
 
 tl123
-  .from('.iTest img', { xPercent: '100', opacity: 0, duration: 1.5 })
+  .from('.iTest img', { xPercent: -100, opacity: 0, duration: 1.5 })
   .from('.content1', { y: 800, opacity: 0, duration: 1 }, '-=1');

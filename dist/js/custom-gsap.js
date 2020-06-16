@@ -80,7 +80,7 @@ const tl = gsap.timeline({
     start: 'top +=50',
     end: '+=100%',
     toggleActions: 'play none none reverse',
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -121,7 +121,7 @@ function init() {
     scrollTrigger: {
       trigger: '#project01',
       // scrub: true,
-      markers: true,
+      // markers: true,
     },
     stagger: { each: 0.2, ease: 'bounce' },
   });

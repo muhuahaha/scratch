@@ -229,3 +229,66 @@ const tl123 = gsap.timeline({
 tl123
   .from('.iTest img', { xPercent: -100, opacity: 0, duration: 1.5 })
   .from('.content1', { y: 800, opacity: 0, duration: 1 }, '-=1');
+
+const frame_count = 9;
+const offset_value = 100;
+
+gsap.to('.viewer', {
+  backgroundPosition: `${-offset_value * frame_count * 2}px 50%`,
+  ease: `steps(${frame_count})`, // use a stepped ease for the sprite sheet
+  scrollTrigger: {
+    trigger: '.scene',
+    start: 'top top',
+    end: `+=${frame_count * offset_value}`,
+    pin: true,
+    scrub: true,
+  },
+});
+
+const tl_height = document.querySelector('#first').offsetHeight;
+console.log(tl_height);
+
+// tl fade in
+const tl_fadein = gsap.timeline();
+tl_fadein.fromTo('.box55', { autoAlpha: 0, y: '+=50' }, { autoAlpha: 1, y: 0, duration: 1 });
+
+// tl move to right
+const tl_move = gsap.timeline();
+tl_move.fromTo('.box55', { x: '-=100' }, { x: '+=400', duration: 1 });
+
+// tl rotate
+const tl_rotate = gsap.timeline();
+tl_rotate.fromTo('.box55', { rotation: 0 }, { rotation: 360, duration: 1 });
+
+ScrollTrigger.create({
+  // pin element
+  trigger: '#first',
+  pin: '.pin-element',
+  end: 'bottom bottom',
+});
+
+ScrollTrigger.create({
+  // fadein animation
+  trigger: '#first',
+  start: 'top top',
+  end: '33% center',
+  animation: tl_fadein,
+  toggleActions: 'play none none reverse',
+});
+
+ScrollTrigger.create({
+  // move to right animation
+  trigger: '#first',
+  start: '33% center',
+  end: '66% bottom',
+  animation: tl_move,
+  toggleActions: 'play none none reverse',
+});
+
+ScrollTrigger.create({
+  // rotate animation
+  trigger: '#first',
+  start: '66% center',
+  animation: tl_rotate,
+  toggleActions: 'play none none reverse',
+});

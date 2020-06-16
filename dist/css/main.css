@@ -1677,6 +1677,28 @@ section {
   font-size: 1.6em;
 }
 
+#first {
+  background-color: #f34343;
+  height: 400vh;
+}
+
+#second {
+  background-color: #43f343;
+}
+
+.pin-element {
+  position: relative;
+}
+
+.box55 {
+  width: 200px;
+  height: 200px;
+  background-color: #4343f3;
+  position: absolute;
+  left: 200px;
+  top: calc(50vh - 100px);
+}
+
 .line {
   width: 100%;
   max-width: 1400px;

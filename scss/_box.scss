@@ -175,6 +175,10 @@
     flex: 1 2 33.33333%;
     order: 6;
   }
+  .box9 {
+    flex: 4 0 50%;
+    justify-content: space-between;
+  }
 }
 
 @media all and (max-width: 767px) {

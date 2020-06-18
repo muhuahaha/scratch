@@ -816,8 +816,8 @@ input::-moz-focus-inner {
 .line {
   width: 100%;
   max-width: 1400px;
-  height: 5px;
-  margin: 20px 15px 15px 0px;
+  height: 4px;
+  margin: 15px 30px 30px 0px;
   position: relative;
   display: inline-block;
   background-color: white;
@@ -839,7 +839,21 @@ input::-moz-focus-inner {
           flex-grow: 1;
   position: relative;
   max-width: 1520px;
-  background: yellow;
+}
+
+.containerGallery {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 20vh;
+  margin-top: 150px;
+  min-height: 20vh;
+  margin-bottom: 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  max-width: 1520px;
 }
 
 .panel {
@@ -1056,10 +1070,6 @@ input::-moz-focus-inner {
 
 .box8 {
   background: #bdc3c7;
-}
-
-.box9 {
-  background: #2ecc71;
 }
 
 .box10 {
@@ -1381,8 +1391,9 @@ input::-moz-focus-inner {
       flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  margin-top: -15px;
+  margin-bottom: -15px;
   position: relative;
-  background-color: blue;
 }
 
 .padd-15 {
@@ -1395,24 +1406,39 @@ input::-moz-focus-inner {
   -webkit-box-flex: 0;
           flex: 0 0 100%;
   max-width: 100%;
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
 }
 
 .portfolio .portfolio-filter button {
-  border: none;
+  border: 2px solid white;
   background-color: transparent;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: capitalize;
-  margin: 0 10px;
+  margin: 0 0.5rem 0.8rem 0;
+  padding: 0.3rem 1.2rem !important;
   color: #fff;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
   white-space: nowrap;
   padding-bottom: 2px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-filter button.active {
+  background: red;
+}
+
+.portfolio .portfolio-filter button:hover {
+  background-color: white;
+  background: black;
+}
+
+.portfolio .portfolio-filter button:focus {
+  outline: none;
+  background: red;
 }
 
 .portfolio .portfolio-item {
@@ -1475,15 +1501,13 @@ input::-moz-focus-inner {
 .portfolio .portfolio-item-inner .portfolio-img img {
   width: 100%;
   display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .portfolio .portfolio-item-inner:hover .portfolio-img img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  -webkit-filter: hue-rotate(-90deg);
-  filter: hue-rotate(-90deg);
 }
 
 .portfolio .portfolio-item .portfolio-info {

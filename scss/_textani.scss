@@ -1,16 +1,16 @@
 .run-animation {
   position: relative;
-  animation: my-animation 3s ease;
+  animation: logo-swap 3s ease;
   animation-timing-function: ease-in-out;
 }
 
 .run-animation:after {
   content: "";
-  animation-name: my-animation;
+  animation-name: logo-swap;
   animation-duration: 3s;
 }
 
-@keyframes my-animation {
+@keyframes logo-swap {
   0%,
   100% {
     content: "😎";

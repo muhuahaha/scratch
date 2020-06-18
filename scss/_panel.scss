@@ -1,29 +1,148 @@
 .line {
   width: 100%;
   max-width: 1400px;
-  height: 2px;
+  height: 5px;
   margin: 20px 15px 15px 0px;
   position: relative;
   display: inline-block;
   background-color: rgba(255, 255, 255, 1);
 }
 
+.container {
+  // width: 90%;
+  display: flex;
+  min-height: 20vh;
+  margin-top: 150px;
+  min-height: 20vh;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+  border: 20px solid #fff;
+  // min-width: 1520px;
+
+  // padding: 0 15px;
+  flex-grow: 1;
+  position: relative;
+  // margin: 0 auto;
+
+  max-width: 1520px;
+  background: yellow;
+}
+
+// .row-group {
+//   display: flex;
+//   flex-wrap: wrap;
+//   // margin-right: -15px;
+//   // margin-left: -15px;
+//   // margin: 15px;
+//   position: relative;
+//   flex-grow: 1;
+//   background-color: blue;
+// }
+
 .panel {
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
+  margin: auto;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // font-weight: 600;
+  // font-size: 1.5em;
+  // text-align: center;
+  // color: white;
+  position: relative;
+  box-sizing: border-box;
+  // padding-top: 100px;
+  padding-bottom: 10%;
+  h1,
+  h2 {
+    color: white;
+    margin: 0 auto;
+  }
+  p,
+  li {
+    color: #fff;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 0.3em 0 1em 0;
+    // max-width: 90%;
+    strong {
+      color: white;
+      font-weight: 500;
+    }
+    code {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 2px 4px;
+      border-radius: 5px;
+    }
+  }
+  li {
+    margin: 0;
+  }
+}
+
+.panelHero {
+  width: 100%;
+  height: 100%;
+  // min-height: 100vh;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
-  font-size: 1.5em;
-  text-align: center;
+
+  // font-weight: 600;
+  // font-size: 1.5em;
+  // text-align: center;
   color: white;
   position: relative;
   box-sizing: border-box;
-  padding-top: 100px;
+  // padding-top: 89px;
+  // padding-bottom: 100px;
+  h1,
+  h2 {
+    color: white;
+    margin: 0 auto;
+  }
+  p,
+  li {
+    color: #fff;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 0.3em 0 1em 0;
+    // max-width: 90%;
+    strong {
+      color: white;
+      font-weight: 500;
+    }
+    code {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 2px 4px;
+      border-radius: 5px;
+    }
+  }
+  li {
+    margin: 0;
+  }
+}
+
+.hero {
+  // height: 90vh;
+
+  // background: url('../img/sky.jpg') no-repeat bottom center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
   padding-bottom: 100px;
+  color: white;
+  animation: color-change-5x 25s linear 2s infinite alternate both;
 }
 
 .panel.align-top {
@@ -31,40 +150,17 @@
   align-items: flex-start;
 }
 
-.panel h1 {
-  font-size: 1.8em;
-  color: white;
-  font-weight: 300;
-  margin: 0 auto;
-  max-width: 800px;
-}
 .panel.description {
   padding-bottom: 60px;
 }
-.panel p,
-.panel li {
-  color: #fff;
-  font-weight: 300;
-  text-align: left;
-  font-size: 0.7em;
-  // line-height: 1.5em;
-  margin: 0.3em 0 1em 0;
-  max-width: 800px;
+
+.intro-label {
+  margin-bottom: 0;
+  font: 500 14px/22px Roboto Mono, monospace;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
-.panel p strong,
-.panel li strong {
-  color: white;
-  font-weight: 400;
-}
-.panel p code,
-.panel li code {
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 2px 4px;
-  border-radius: 5px;
-}
-.panel li {
-  margin: 0;
-}
+
 .black {
   background-color: #040c26;
 }
@@ -79,7 +175,7 @@
 }
 
 .red {
-  background-color: #c82736;
+  background-color: #e43f5a;
 }
 
 .purple {

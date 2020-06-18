@@ -4,10 +4,11 @@
   justify-content: space-between;
   align-items: center;
   height: 85px;
-  width: 100vw;
+  // width: 100vw;
+  width: 100%;
   top: 0; /* Stay on top */
   padding: 0 10vw;
-  // background: #fff;
+  // background: $secondary-color;
   color: #fff;
   z-index: 999;
   transition: 0.4s ease-out;
@@ -15,25 +16,44 @@
   a {
     text-decoration: none;
     color: inherit;
-    // text-transform: uppercase;
+    text-transform: uppercase;
   }
 
   .logo {
     font-size: 2rem;
     font-weight: bold;
-    -ms-user-select: None;
-    -moz-user-select: None;
-    -webkit-user-select: None;
-    user-select: None;
+    // -ms-user-select: None;
+    // -moz-user-select: None;
+    // -webkit-user-select: None;
+    // user-select: None;
     a:focus {
       outline: 0;
     }
   }
+  .fancy {
+    position: relative;
+    text-align: center;
+    line-height: 10vh;
+    text-transform: uppercase;
+    span {
+      opacity: 0;
+      transition: all 1s ease;
+      transform: translateY(-50px);
+      display: inline-block;
+    }
+    span.fade {
+      opacity: 1;
+      margin-right: 2px;
+      transform: translateY(0);
+      color: $blanc-color;
+    }
+  }
+
   .nav-links {
     display: flex;
     list-style: none;
     padding: 5px;
-    // background: rgba(254, 220, 0, 0.6);
+    background: $primary-color;
     // .active {
     //   color: $secondary-color;
     //   font-weight: 700;
@@ -47,17 +67,17 @@
 
       a {
         color: #fff;
+        // color: #000;
         text-transform: uppercase;
         text-decoration: none;
         letter-spacing: 0.15em;
-
         display: inline-block;
         padding: 5px 10px;
         position: relative;
       }
+      // underline
       a:after {
         background: none repeat scroll 0 0 transparent;
-
         bottom: 0;
         content: "";
         display: block;
@@ -128,6 +148,9 @@
     background: #040c26;
     color: #fff;
     // border-bottom: 1px solid $blanc-color;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+      0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+
     .menu-icon {
       &__line,
       &__line::before,

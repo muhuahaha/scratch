@@ -1,31 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap");
 @import "config";
 @import "color";
-@import "hero";
 @import "header";
-@import "logo";
-@import "avatar";
-@import "newMain";
 @import "media";
 @import "animations";
-@import "footer";
-@import "box";
 @import "textani";
-@import "marquee";
-@import "about";
-@import "test";
 @import "panel";
-@import "portfolio";
-@import "about1";
-
-@import "bg_stripes";
+@import "box";
 body {
   font-family: "Roboto", sans-serif;
-  // font-family: "Poppins", sans-serif;
-  // color: #000;
   height: 100%;
   line-height: 1.5;
-  background-color: #040c26;
+  // background-color: #040c26;
   // background-image: linear-gradient(
   //     rgba(rgba(4, 12, 38, 0.05)) 2px,
   //     transparent 2px

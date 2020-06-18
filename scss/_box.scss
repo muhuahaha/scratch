@@ -1,20 +1,21 @@
 /* Some default styles to make each box visible */
 .box {
-  color: white;
-  font-size: 2rem;
+  // color: white;
+  // font-size: 2rem;
   // text-align: center;
 
-  // flex-basis: 500px;
+  flex-basis: 500px;
   width: calc(33.333333% - 20px);
   padding: 32px;
+
   // margin: 10px;
   flex-wrap: wrap;
   justify-content: center;
   flex-basis: auto;
-  h1 {
-    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-  }
+  // h1 {
+  //   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  //   text-transform: uppercase;
+  // }
 }
 
 /* Colours for each box */
@@ -22,7 +23,7 @@
   background: #1abc9c;
 }
 .box2 {
-  // background: #3498db;
+  background: #3498db;
 }
 .box3 {
   background: #9b59b6;
@@ -40,10 +41,10 @@
   background: #e74c3c;
 }
 .box8 {
-  // background: #bdc3c7;
+  background: #bdc3c7;
 }
 .box9 {
-  // background: #2ecc71;
+  background: #2ecc71;
 }
 .box10 {
   background: #16a085;
@@ -72,21 +73,19 @@
 }
 
 .box1 {
-  flex: 4 1 33.33333334%;
+  flex: 1 4 33.33333334%;
 }
 .box2 {
-  flex: 1 5 33.33333334%;
+  flex: 4 1 33.33333334%;
 }
 .box3 {
-  flex: 1 5;
+  flex: 1 5 33.33333334%;
 }
 .box4 {
   flex: 1 0 100%;
-  padding: 10px;
 }
 
 .box5 {
-  align-self: center;
   flex: 1 0 100%;
 }
 .box6 {
@@ -96,18 +95,16 @@
   flex: 1 0 100%;
 }
 .box8 {
-  flex: 1 0 100%;
+  flex: 1 5 50%;
   img {
     width: 28%;
   }
 }
 .box9 {
-  flex: 1 0 100%;
-
-  min-height: 800px;
+  flex: 4 0 50%;
 }
 .box10 {
-  flex: 1 0 30%;
+  flex: 1 0 50%;
 }
 .box11 {
   flex: 1 0 70%;
@@ -190,7 +187,6 @@
   }
   .box {
     width: 100%;
-    font-size: 2rem;
   }
 
   //   /* Reorder items */
@@ -202,9 +198,7 @@
   //     flex-basis: 500px;
   //     flex-grow: 1;
   //   }
-  .box1 {
-    background: #e67e22;
-  }
+
   .box1 {
     order: 5;
     flex: 1 2 100%;

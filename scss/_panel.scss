@@ -1,7 +1,7 @@
 .line {
   width: 100%;
   max-width: 1400px;
-  height: 4px;
+  height: 2px;
   margin: 15px 30px 30px 0px;
   position: relative;
   display: inline-block;
@@ -27,7 +27,7 @@
 }
 
 .containerGallery {
-  width: 100%;
+  width: 80%;
   display: flex;
   min-height: 20vh;
   margin-top: 150px;
@@ -198,4 +198,44 @@
 }
 .green {
   background-color: #28a92b;
+}
+
+@media (max-width: 991px) {
+  .panel {
+    padding: 0 10vw;
+  }
+  .row {
+    background-color: green;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .containerGallery {
+    width: 100%;
+    display: flex;
+    min-height: 20vh;
+    min-height: 20vh;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .panel {
+    padding: 0 5vw;
+  }
+  .row {
+    background-color: red;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .containerGallery {
+    width: 100%;
+    display: flex;
+    min-height: 20vh;
+    min-height: 20vh;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+  }
 }

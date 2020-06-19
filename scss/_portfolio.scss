@@ -6,7 +6,7 @@
   margin-top: -15px;
   margin-bottom: -15px;
   position: relative;
-  // background-color: blue;
+  background-color: blue;
 }
 
 .padd-15 {
@@ -25,10 +25,10 @@
 .portfolio .portfolio-filter button {
   border: 2px solid white;
   background-color: transparent;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 600;
   text-transform: capitalize;
-  margin: 0 0.5rem 0.8rem 0;
+  margin: 1rem 0.5rem 3rem 0;
   padding: 0.3rem 1.2rem !important;
   color: #fff;
   cursor: pointer;
@@ -40,15 +40,16 @@
 }
 
 .portfolio .portfolio-filter button.active {
-  background: red;
+  background: #3498db;
 }
 .portfolio .portfolio-filter button:hover {
   background-color: white;
-  background: black;
+  color: black;
 }
 .portfolio .portfolio-filter button:focus {
   outline: none;
-  background: red;
+  background-color: white;
+  color: black;
 }
 .portfolio .portfolio-item {
   /* background-color:  red; */
@@ -107,15 +108,15 @@
 }
 
 .portfolio .portfolio-item-inner:hover .portfolio-img img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .portfolio .portfolio-item .portfolio-info {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: rgba(4, 12, 38, 0.3);
+  background-color: rgba(4, 12, 38, 0);
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -298,6 +299,14 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
+  .portfolio .portfolio-filter {
+    text-align: left;
+    margin-bottom: 89px;
+  }
+  .portfolio .portfolio-filter button {
+    margin-bottom: 5px;
+    // transform: translateX(-1500px);
+  }
 }
 
 @media (max-width: 767px) {
@@ -305,12 +314,13 @@
     flex: 1 0 100%;
     max-width: 100%;
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 89px;
   }
   .portfolio .portfolio-filter button {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     // transform: translateX(-1500px);
   }
+
   .avatar {
     // background: black;
     background: rgba(255, 255, 255, 0);
@@ -319,21 +329,6 @@
     img {
       width: 90%;
     }
-  }
-  .container1 {
-    width: 90%;
-    // width: 90%;
-    display: flex;
-    min-height: 100vh;
-    margin-top: 20px;
-    margin: auto;
-    // border: 20px solid #fff;
-    // min-width: 1520px;
-    padding: 0 15px;
-    flex-grow: 1;
-    // margin: 0 auto;
-    max-width: 1300px;
-    /* background-color: lightgray; */
   }
 }
 

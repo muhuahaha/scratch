@@ -1,0 +1,56 @@
+.bottomright {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  //   position: absolute;
+  //   top: -26px;
+  //   right: -50px;
+}
+
+.bottomleft {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+}
+
+.demo {
+  //   background-color: white;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 5px;
+  margin: 10px;
+  z-index: 30;
+  //   transform: rotate(90deg);
+}
+
+@media (max-width: 991px) {
+  .bottomright {
+    position: fixed;
+    top: 80vh;
+    right: 2vw;
+    transition: all 0.3s ease-in-out;
+  }
+  .bottomleft {
+    position: fixed;
+    bottom: 20px;
+    left: 2vw;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 767px) {
+  .bottomright {
+    position: fixed;
+    top: 86vh;
+    right: 0px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .bottomleft {
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
+    transition: all 0.3s ease-in-out;
+  }
+}

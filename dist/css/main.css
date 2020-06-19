@@ -830,6 +830,10 @@ input::-moz-focus-inner {
   }
   .main-header .menu-btn:checked ~ .nav-links {
     opacity: 1;
+    -webkit-transition: opacity 0.3s 0.5s, -webkit-clip-path 0.3s 0.5s;
+    transition: opacity 0.3s 0.5s, -webkit-clip-path 0.3s 0.5s;
+    transition: opacity 0.3s 0.5s, clip-path 0.3s 0.5s;
+    transition: opacity 0.3s 0.5s, clip-path 0.3s 0.5s, -webkit-clip-path 0.3s 0.5s;
     -webkit-clip-path: circle(100% at center);
             clip-path: circle(100% at center);
   }
@@ -1474,6 +1478,10 @@ input::-moz-focus-inner {
 
 .box6 {
   background: #e67e22;
+  background-image: url(../img/wave.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
 }
 
 .box7 {
@@ -1538,6 +1546,7 @@ input::-moz-focus-inner {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
+  position: relative;
 }
 
 .box5 {
@@ -1624,7 +1633,6 @@ input::-moz-focus-inner {
   .box {
     color: white;
     text-align: left;
-    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2042,6 +2050,61 @@ input::-moz-focus-inner {
 .about .about-content .skills .skills-item .progress .progress-in,
 .btn {
   background-color: #ec1839;
+}
+
+.bottomright {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+}
+
+.bottomleft {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+}
+
+.demo {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 5px;
+  margin: 10px;
+  z-index: 30;
+}
+
+@media (max-width: 991px) {
+  .bottomright {
+    position: fixed;
+    top: 80vh;
+    right: 2vw;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .bottomleft {
+    position: fixed;
+    bottom: 20px;
+    left: 2vw;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 767px) {
+  .bottomright {
+    position: fixed;
+    top: 86vh;
+    right: 0px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .bottomleft {
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 body {

@@ -10,11 +10,13 @@
 @import "panel";
 @import "box";
 @import "about";
+@import "test";
 
 body {
   font-family: "Roboto", sans-serif;
   height: 100%;
   line-height: 1.5;
+
   // background-color: #040c26;
   // background-image: linear-gradient(
   //     rgba(rgba(4, 12, 38, 0.05)) 2px,

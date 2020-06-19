@@ -12,6 +12,7 @@
   flex-wrap: wrap;
   justify-content: center;
   flex-basis: auto;
+
   // h1 {
   //   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
   //   text-transform: uppercase;
@@ -36,6 +37,11 @@
 }
 .box6 {
   background: #e67e22;
+  background-image: url(../img/wave.svg);
+
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
 }
 .box7 {
   background: #e74c3c;
@@ -83,6 +89,7 @@
 }
 .box4 {
   flex: 1 0 100%;
+  position: relative;
 }
 
 .box5 {
@@ -132,7 +139,7 @@
     color: white;
     // font-size: 2rem;
     text-align: left;
-    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    // text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
     display: flex;
     // text-transform: uppercase;
   }

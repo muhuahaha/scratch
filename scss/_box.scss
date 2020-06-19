@@ -5,7 +5,7 @@
   // text-align: center;
 
   flex-basis: 500px;
-  width: calc(33.333333% - 20px);
+  // width: calc(33.333333% - 20px);
   padding: 32px;
 
   // margin: 10px;
@@ -29,7 +29,7 @@
   background: #9b59b6;
 }
 .box4 {
-  background: #34495e;
+  background: #040c26;
 }
 .box5 {
   background: #f1c40f;
@@ -95,13 +95,10 @@
   flex: 1 0 100%;
 }
 .box8 {
-  flex: 1 5 50%;
-  img {
-    width: 28%;
-  }
+  flex: 1 0 40%;
 }
 .box9 {
-  flex: 4 0 50%;
+  flex: 1 0 60%;
 }
 .box10 {
   flex: 1 0 50%;
@@ -133,8 +130,8 @@
 @media all and (max-width: 1500px) {
   .box {
     color: white;
-    font-size: 2rem;
-    text-align: center;
+    // font-size: 2rem;
+    text-align: left;
     text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
     display: flex;
     // text-transform: uppercase;
@@ -163,8 +160,9 @@
     }
   }
   .box4 {
-    flex: 1 2 60%;
+    flex: 1 2 50%;
     order: 1;
+    justify-content: space-between;
   }
   .box5 {
     flex: 1 2 100%;

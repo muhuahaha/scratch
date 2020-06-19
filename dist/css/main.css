@@ -1396,9 +1396,9 @@ input::-moz-focus-inner {
   background-color: #28a92b;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .panel {
-    padding: 0 10vw;
+    padding: 0 8vw;
   }
   .row {
     background-color: green;

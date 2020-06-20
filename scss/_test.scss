@@ -9,7 +9,7 @@
   position: fixed;
   bottom: 20px;
   right: 0;
-  text-align: center;
+  //   text-align: center;
   //   position: absolute;
   //   top: -26px;
   //   right: -50px;
@@ -35,7 +35,7 @@
 @media (max-width: 991px) {
   .bottomright {
     position: fixed;
-    top: 80vh;
+    bottom: 20px;
     right: 2vw;
     transition: all 0.3s ease-in-out;
   }
@@ -50,7 +50,7 @@
 @media (max-width: 767px) {
   .bottomright {
     position: fixed;
-    top: 86vh;
+    bottom: 20px;
     right: 0px;
     transition: all 0.3s ease-in-out;
   }

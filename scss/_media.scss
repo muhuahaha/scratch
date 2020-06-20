@@ -41,7 +41,7 @@
       // background: $noir-color;
       transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
       clip-path: circle(200px at top right);
-      animation: color-change-5x 10s linear 2s infinite alternate both;
+      animation: color-change-5x 16s linear 2s infinite alternate both;
 
       .nav-link {
         opacity: 0;
@@ -141,7 +141,7 @@
         color: #fff;
         font-weight: bold;
         // background: #ec1939;
-        transform: translate(0px, -0px);
+
         transition: 0.4s ease-out;
       }
     }

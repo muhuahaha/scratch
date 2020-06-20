@@ -358,20 +358,15 @@ input::-moz-focus-inner {
 }
 
 .main-header.scrolled {
-  height: 89px;
-  color: #fff;
-}
-
-.main-header.scrolled .menu-icon {
+  height: 70px;
   background: #040c26;
+  color: #fff;
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
 }
 
 .main-header.scrolled .menu-icon__line, .main-header.scrolled .menu-icon__line::before, .main-header.scrolled .menu-icon__line:after {
   background: #fff;
-}
-
-.main-header.scrolled .nav-links {
-  background: #040c26;
 }
 
 .main-header.scrolled .logo {
@@ -380,13 +375,9 @@ input::-moz-focus-inner {
   transition: all 0.4s ease-out;
 }
 
-.main-header.scrolled .logo .fancy {
-  background: #040c26;
-}
-
 .main-header.scrolled .logo .fancy span.fade {
-  -webkit-transform: scale(0.6);
-          transform: scale(0.6);
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
   color: #fff;
   font-weight: bold;
   -webkit-transition: all 0.4s ease-out;
@@ -735,7 +726,7 @@ input::-moz-focus-inner {
   }
   .portfolio .portfolio-filter {
     text-align: left;
-    margin-bottom: 89px;
+    margin-bottom: 50px;
   }
   .portfolio .portfolio-filter button {
     margin-bottom: 5px;
@@ -749,7 +740,7 @@ input::-moz-focus-inner {
             flex: 1 0 100%;
     max-width: 100%;
     text-align: left;
-    margin-bottom: 89px;
+    margin-bottom: 50px;
   }
   .portfolio .portfolio-filter button {
     margin-bottom: 5px;
@@ -826,8 +817,8 @@ input::-moz-focus-inner {
     transition: opacity 0.8s 0.5s, clip-path 1s 0.5s, -webkit-clip-path 1s 0.5s;
     -webkit-clip-path: circle(200px at top right);
             clip-path: circle(200px at top right);
-    -webkit-animation: color-change-5x 10s linear 2s infinite alternate both;
-            animation: color-change-5x 10s linear 2s infinite alternate both;
+    -webkit-animation: color-change-5x 16s linear 2s infinite alternate both;
+            animation: color-change-5x 16s linear 2s infinite alternate both;
   }
   .main-header .nav-links .nav-link {
     opacity: 0;
@@ -923,8 +914,6 @@ input::-moz-focus-inner {
             transform: scale(1.2);
     color: #fff;
     font-weight: bold;
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
     -webkit-transition: 0.4s ease-out;
     transition: 0.4s ease-out;
   }
@@ -1254,7 +1243,7 @@ input::-moz-focus-inner {
   display: -ms-flexbox;
   display: flex;
   min-height: 20vh;
-  margin-top: 150px;
+  margin-top: 80px;
   min-height: 20vh;
   margin-bottom: 100px;
   -ms-flex-wrap: wrap;
@@ -1468,7 +1457,7 @@ input::-moz-focus-inner {
     display: flex;
     min-height: 20vh;
     min-height: 20vh;
-    margin-top: 120px;
+    margin-top: 80px;
     margin-bottom: 100px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2088,7 +2077,7 @@ input::-moz-focus-inner {
 
 .bottomtop {
   position: absolute;
-  top: -60px;
+  top: -65px;
   right: -26px;
   text-align: center;
 }

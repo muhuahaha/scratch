@@ -48,6 +48,12 @@
 }
 
 @media (max-width: 767px) {
+  .bottomtop {
+    position: absolute;
+    top: -65px;
+    right: -5px;
+    text-align: center;
+  }
   .bottomright {
     position: fixed;
     bottom: 20px;

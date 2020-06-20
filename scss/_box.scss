@@ -188,11 +188,6 @@
 @media all and (max-width: 767px) {
   /* Turn on flexbox */
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
   .box {
     width: 100%;
   }

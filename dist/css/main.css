@@ -2103,14 +2103,14 @@ input::-moz-focus-inner {
   .bottomright {
     position: fixed;
     top: 86vh;
-    right: -10px;
+    right: 0px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   .bottomleft {
     position: fixed;
     bottom: 20px;
-    left: -10px;
+    left: 0px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }

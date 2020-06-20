@@ -38,8 +38,7 @@
       height: 100vh;
       font-size: 2rem;
       color: #fff;
-      background-size: cover;
-      animation: color-change-5x 25s linear 2s infinite alternate both;
+      background: black;
       transition: opacity 0.3s 0.5s, clip-path 0.3s 0.5s;
       clip-path: circle(200px at top right);
 

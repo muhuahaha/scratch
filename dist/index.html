@@ -12,7 +12,6 @@
   </head>
 
   <body>
-
     <header class="main-header">
       <div class="logo" id="logo" class="run-animation">
         <a href="#one" class="fancy" id="logo-btn">YTK</a>
@@ -37,7 +36,7 @@
           <a href="#four">Sec 4</a>
         </li>
         <li class="nav-link">
-          <a href="#five">Sec 5</a>
+          <a href="#five">tl;dr</a>
         </li>
       </ul>
     </header>
@@ -48,18 +47,14 @@
           <div class="container">
             <div class="demo bottomleft">
               <div id="clock"></div>
-              <!-- 김<br />용<br />태 -->
             </div>
             <div class="demo bottomright">김<br />용<br />태</div>
+            <div class="demo bottomtop">
+              <time id="datum"></time>
+            </div>
             <div class="box box1">
               <div class="intro-label"><span>Feature</span></div>
               <h1>Box1</h1>
-              <p>
-                <span class="line line-1"></span>This line's animation will
-                begin when it enters the viewport and finish when its top edge
-                hits the top of the viewport, staying perfectly in sync with the
-                scrollbar because it has <code>scrub:&nbsp;true</code>
-              </p>
             </div>
             <div class="box box2">
               <h2>Box2</h2>
@@ -469,15 +464,7 @@
       </section>
       <section id="four" class="panel green">
         <div class="container">
-          <div class="box box1">
-            <h1>Box1</h1>
-            <p>
-              <span class="line line-1"></span>This line's animation will begin
-              when it enters the viewport and finish when its top edge hits the
-              top of the viewport, staying perfectly in sync with the scrollbar
-              because it has <code>scrub:&nbsp;true</code>
-            </p>
-          </div>
+          <div class="box box1"></div>
           <div class="box box2">
             <h2>Box2</h2>
             <p>
@@ -543,8 +530,18 @@
           </div>
         </div>
       </section>
-      <section id="five" class="panel">
-        <div class="container"></div>
+      <section id="five" class="panel red">
+        <div class="container">
+          <div class="box box8">
+            <h2>Box8</h2>
+            <p>
+              <span class="line line-1"></span>This line's animation will begin
+              when it enters the viewport and finish when its top edge hits the
+              top of the viewport, staying perfectly in sync with the scrollbar
+              because it has <code>scrub:&nbsp;true</code>
+            </p>
+          </div>
+        </div>
       </section>
     </main>
 

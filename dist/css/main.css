@@ -2052,10 +2052,18 @@ input::-moz-focus-inner {
   background-color: #ec1839;
 }
 
+.bottomtop {
+  position: absolute;
+  top: -60px;
+  right: -26px;
+  text-align: center;
+}
+
 .bottomright {
   position: fixed;
   bottom: 20px;
   right: 0;
+  text-align: center;
 }
 
 .bottomleft {
@@ -2065,9 +2073,10 @@ input::-moz-focus-inner {
 }
 
 .demo {
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
+  background-color: white;
+  color: #040c26;
+  font-size: 0.9rem;
+  font-weight: 500;
   padding: 5px;
   margin: 10px;
   z-index: 30;
@@ -2094,14 +2103,14 @@ input::-moz-focus-inner {
   .bottomright {
     position: fixed;
     top: 86vh;
-    right: 0px;
+    right: -10px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   .bottomleft {
     position: fixed;
     bottom: 20px;
-    left: 0px;
+    left: -10px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }

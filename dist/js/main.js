@@ -49,9 +49,10 @@ document.getElementById('myDIV').addEventListener('click', myFunction);
 
 function startTime() {
   const today = new Date();
-  const h = today.getHours();
+  let h = today.getHours();
   let m = today.getMinutes();
   let s = today.getSeconds();
+  h = checkTime(h);
   m = checkTime(m);
   s = checkTime(s);
   document.getElementById('clock').innerHTML = `${h}<br />${m}<br />${s}`;
@@ -66,20 +67,14 @@ function checkTime(i) {
 
 document.getElementById('clock').addEventListener('load', startTime());
 
-const preloader = document.querySelector('.preloader');
+function date() {
+  const event = new Date();
 
-const fadeEffect = setInterval(() => {
-  // if we don't set opacity 1 in CSS, then   //it will be equaled to "", that's why we   // check it
-  if (!preloader.style.opacity) {
-    preloader.style.opacity = 1;
-    const element = document.querySelector('.preloader');
-    element.classList.add('loaded');
-  }
-  if (preloader.style.opacity > 0) {
-    preloader.style.opacity -= 0.1;
-  } else {
-    clearInterval(fadeEffect);
-  }
-}, 200);
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const test23 = event.toLocaleDateString('ko-KR', options);
+  // const test23 = event.toLocaleDateString('de-DE', options);
 
-window.addEventListener('load', fadeEffect);
+  document.getElementById('datum').innerHTML = test23;
+}
+
+document.getElementById('datum').addEventListener('load', date());

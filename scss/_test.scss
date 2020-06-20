@@ -1,7 +1,15 @@
+.bottomtop {
+  position: absolute;
+  top: -60px;
+  right: -26px;
+  text-align: center;
+}
+
 .bottomright {
   position: fixed;
   bottom: 20px;
   right: 0;
+  text-align: center;
   //   position: absolute;
   //   top: -26px;
   //   right: -50px;
@@ -14,10 +22,10 @@
 }
 
 .demo {
-  //   background-color: white;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
+  background-color: white;
+  color: $noir-color;
+  font-size: 0.9rem;
+  font-weight: 500;
   padding: 5px;
   margin: 10px;
   z-index: 30;
@@ -43,14 +51,14 @@
   .bottomright {
     position: fixed;
     top: 86vh;
-    right: 0px;
+    right: -10px;
     transition: all 0.3s ease-in-out;
   }
 
   .bottomleft {
     position: fixed;
     bottom: 20px;
-    left: 0px;
+    left: -10px;
     transition: all 0.3s ease-in-out;
   }
 }

@@ -61,6 +61,8 @@
 
     .menu-btn:checked ~ .nav-links {
       opacity: 1;
+      background-size: cover;
+      animation: color-change-5x 25s linear 2s infinite alternate both;
       transition: opacity 0.3s 0.5s, clip-path 0.3s 0.5s;
       clip-path: circle(100% at center);
 

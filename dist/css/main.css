@@ -202,8 +202,6 @@ input::-moz-focus-inner {
 
 .main-header {
   position: fixed;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0px, 0px, 0px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

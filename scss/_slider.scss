@@ -107,16 +107,24 @@
     width: 100% !important;
     margin-top: 12%;
     margin-bottom: 15%;
+    // background-color: yellow;
   }
+
+  .glider-slide img {
+    object-fit: cover;
+    object-position: 50% 0;
+    height: 500px;
+  }
+
   .glider-next {
     position: absolute;
     width: 2rem;
-    height: 2rem;
-    right: 5px;
-    top: 35%;
+    height: 87.5%;
+    right: 0px;
+    top: 0;
     padding: 5px;
     font-size: 20px;
-    background-color: rgba(253, 241, 0, 0.5);
+    background-color: rgba(126, 121, 38, 0.5);
     z-index: 13;
   }
 
@@ -131,12 +139,12 @@
   .glider-prev {
     position: absolute;
     width: 2rem;
-    height: 2rem;
-    left: 5px;
-    top: 35%;
+    height: 87.5%;
+    left: 0px;
+    top: 0;
     padding: 5px;
     font-size: 20px;
-    background-color: rgba(253, 241, 0, 0.5);
+    background-color: rgba(126, 121, 38, 0.5);
     z-index: 13;
   }
 

@@ -4,8 +4,11 @@ window.addEventListener('load', function() {
     slidesToShow: 1,
     draggable: true,
     dots: '.dots',
-    dragVelocity: 3.8,
     rewind: true,
+    dragVelocity: 3.8,
+    scrollLockDelay: 350,
+    scrollLock: true,
+    propagateEvent: true,
     arrows: {
       prev: '.glider-prev',
       next: '.glider-next',

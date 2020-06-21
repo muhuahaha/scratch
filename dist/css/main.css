@@ -202,6 +202,12 @@ input::-moz-focus-inner {
 
 .main-header {
   position: fixed;
+  transform: translateZ(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  -webkit-transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,7 +226,6 @@ input::-moz-focus-inner {
   z-index: 999;
   -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
-  -webkit-overflow-scrolling: touch;
 }
 
 .main-header a {

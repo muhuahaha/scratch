@@ -2,7 +2,7 @@ const header = document.querySelector('.main-header');
 
 window.addEventListener('scroll', () => {
   const scrollPos = window.scrollY;
-  if (scrollPos > 350) {
+  if (scrollPos > 150) {
     header.classList.add('scrolled');
   } else {
     header.classList.remove('scrolled');

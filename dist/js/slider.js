@@ -1,5 +1,5 @@
 
-new Glide('.glide', {
+new Glide('.glider', {
   type: 'carousel',
   startAt: 0,
   perView: 3

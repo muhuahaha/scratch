@@ -1,3 +1,13 @@
+.slider-title {
+  position: absolute;
+  top: 100px;
+  left: 15vw;
+  text-align: left;
+  color: red;
+  background: green($color: #000000);
+  z-index: 35;
+}
+
 .glider-contain {
   width: 75% !important;
 
@@ -62,8 +72,14 @@
   color: white;
 }
 
-.glider-dot {
+.dots-container {
   margin-top: 50px;
+}
+
+.glider-dot {
+  margin: 10px;
+  width: 15px;
+  height: 15px;
 }
 
 /* Bottom left text */
@@ -103,6 +119,15 @@
 }
 
 @media (max-width: 767px) {
+  .slider-title {
+    position: absolute;
+    top: -10vh;
+    right: -70%;
+
+    transform: rotate(-90deg);
+    z-index: 35;
+  }
+
   .glider-contain {
     width: 100% !important;
     margin-top: 12%;
@@ -113,15 +138,15 @@
   .glider-slide img {
     object-fit: cover;
     object-position: 50% 0;
-    height: 500px;
+    height: 600px;
   }
 
   .glider-next {
     position: absolute;
     width: 2rem;
-    height: 87.5%;
+    height: 50%;
     right: 0px;
-    top: 0;
+    top: 20%;
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
@@ -139,9 +164,9 @@
   .glider-prev {
     position: absolute;
     width: 2rem;
-    height: 87.5%;
+    height: 50%;
     left: 0px;
-    top: 0;
+    top: 20%;
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
@@ -150,10 +175,12 @@
 
   .glider-prev:hover {
     background-color: rgba(253, 241, 0, 1);
+  }
 
-    .fa {
-      color: black;
-    }
+  .glider-dot {
+    margin: 20px;
+    width: 15px;
+    height: 15px;
   }
 
   .fa {

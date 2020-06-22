@@ -2323,6 +2323,16 @@ input::-moz-focus-inner {
   }
 }
 
+.slider-title {
+  position: absolute;
+  top: 100px;
+  left: 15vw;
+  text-align: left;
+  color: red;
+  background: 0;
+  z-index: 35;
+}
+
 .glider-contain {
   width: 75% !important;
   margin-top: 8%;
@@ -2389,8 +2399,14 @@ input::-moz-focus-inner {
   color: white;
 }
 
-.glider-dot {
+.dots-container {
   margin-top: 50px;
+}
+
+.glider-dot {
+  margin: 10px;
+  width: 15px;
+  height: 15px;
 }
 
 /* Bottom left text */
@@ -2431,6 +2447,14 @@ input::-moz-focus-inner {
 }
 
 @media (max-width: 767px) {
+  .slider-title {
+    position: absolute;
+    top: -10vh;
+    right: -70%;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    z-index: 35;
+  }
   .glider-contain {
     width: 100% !important;
     margin-top: 12%;
@@ -2441,14 +2465,14 @@ input::-moz-focus-inner {
        object-fit: cover;
     -o-object-position: 50% 0;
        object-position: 50% 0;
-    height: 500px;
+    height: 600px;
   }
   .glider-next {
     position: absolute;
     width: 2rem;
-    height: 87.5%;
+    height: 50%;
     right: 0px;
-    top: 0;
+    top: 20%;
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
@@ -2463,9 +2487,9 @@ input::-moz-focus-inner {
   .glider-prev {
     position: absolute;
     width: 2rem;
-    height: 87.5%;
+    height: 50%;
     left: 0px;
-    top: 0;
+    top: 20%;
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
@@ -2474,8 +2498,10 @@ input::-moz-focus-inner {
   .glider-prev:hover {
     background-color: #fdf100;
   }
-  .glider-prev:hover .fa {
-    color: black;
+  .glider-dot {
+    margin: 20px;
+    width: 15px;
+    height: 15px;
   }
   .fa {
     display: inline-block;

@@ -2449,10 +2449,8 @@ input::-moz-focus-inner {
 @media (max-width: 767px) {
   .slider-title {
     position: absolute;
-    top: -10vh;
-    right: -70%;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    top: 20 vh;
+    right: -25%;
     z-index: 35;
   }
   .glider-contain {
@@ -2471,7 +2469,7 @@ input::-moz-focus-inner {
     position: absolute;
     width: 2rem;
     height: 50%;
-    right: 0px;
+    right: 10px;
     top: 20%;
     padding: 5px;
     font-size: 20px;
@@ -2488,7 +2486,7 @@ input::-moz-focus-inner {
     position: absolute;
     width: 2rem;
     height: 50%;
-    left: 0px;
+    left: 10px;
     top: 20%;
     padding: 5px;
     font-size: 20px;

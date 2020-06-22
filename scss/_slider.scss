@@ -119,8 +119,15 @@
 }
 
 @media (max-width: 767px) {
-    
+   .slider-title {
+    position: absolute;
+    top: 1vh;
+    right: 25%;
 
+    // transform: rotate(-90deg);
+    z-index: 35;
+  }
+  
   .glider-contain {
     width: 100% !important;
     margin-top: 12%;

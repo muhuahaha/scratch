@@ -1,12 +1,4 @@
-.slider-title {
-  position: absolute;
-  top: 100px;
-  left: 15vw;
-  text-align: left;
-  color: red;
-  background: green($color: #000000);
-  z-index: 35;
-}
+
 
 .glider-contain {
   width: 75% !important;
@@ -119,15 +111,6 @@
 }
 
 @media (max-width: 767px) {
-   .slider-title {
-    position: absolute;
-    top: 1vh;
-    right: 25%;
-
-    // transform: rotate(-90deg);
-    z-index: 35;
-  }
-  
   .glider-contain {
     width: 90%;
     margin-top: 12%;

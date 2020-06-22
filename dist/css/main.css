@@ -2449,7 +2449,7 @@ input::-moz-focus-inner {
 @media (max-width: 767px) {
   .slider-title {
     position: absolute;
-    top: 20 vh;
+    top: 1vh;
     right: -25%;
     z-index: 35;
   }

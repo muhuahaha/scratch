@@ -26,6 +26,7 @@
   top: 40%;
   padding: 5px;
   background-color: rgba(253, 241, 0, 0.5);
+  touch-action: manipulation;
   z-index: 13;
 }
 
@@ -45,6 +46,7 @@
   top: 40%;
   padding: 5px;
   background-color: rgba(253, 241, 0, 0.5);
+  touch-action: manipulation;
   z-index: 13;
 }
 
@@ -133,6 +135,8 @@
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
+    touch-action: manipulation;
+    
   }
 
   .glider-next:hover {
@@ -152,6 +156,7 @@
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
+    touch-action: manipulation;
   }
 
   .glider-prev:hover {

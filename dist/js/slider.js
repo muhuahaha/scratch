@@ -1,20 +1,22 @@
 
-
-window.addEventListener('load', function() {
-  new Glider(document.querySelector('.glider'), {
-    type: 'carousel',
+new Glide('.glide', {
+  type: 'carousel',
   startAt: 0,
-  perView: 3,
-    draggable: true,
-    dots: '.dots',
- 
-    dragVelocity: 3.8,
-    scrollLockDelay: 350,
-    scrollLock: true,
-    propagateEvent: true,
-    arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next',
-    },
-  });
+  perView: 3
 });
+
+var select = document.querySelector('#options-type-select')
+
+var glide = new Glide('#options-type', {
+  type: select.value,
+  focusAt: 'center',
+  perView: 3
+})
+
+select.addEventListener('change', function (event) {
+  glide.update({
+    type: event.target.value
+  })
+})
+
+glide.mount()

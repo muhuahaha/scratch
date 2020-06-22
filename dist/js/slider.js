@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
     slidesToShow: 1,
     draggable: true,
     dots: '.dots',
-   rewind; true,
+   rewind: true,
     dragVelocity: 3.8,
     scrollLockDelay: 350,
     scrollLock: true,

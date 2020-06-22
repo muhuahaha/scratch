@@ -1,19 +1,15 @@
-
-
 .glider-contain {
-  width: 100% !important;
-
+  width: 80%;
   margin-top: 8%;
   margin-bottom: 5%;
 }
 
-.glider .slider img {
+.glider-slide img {
   width: 100%;
-  display: flex;
   transition: all 0.5s ease-in-out;
 }
 
-.glider .slider:hover img {
+.glider-slide:hover img {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
@@ -67,7 +63,7 @@
 }
 
 .dots-container {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .glider-dot {
@@ -114,16 +110,16 @@
 
 @media only screen and (max-width: 768px) {
   .glider-contain {
-    width: 100%;
-    margin-top: 150px;
-    margin-bottom: 15%;
+    width: 90%;
+    margin-top: 70px;
+    margin-bottom: 10px;
     background-color: yellow;
   }
 
   .glider-slide img {
     object-fit: cover;
     object-position: 50% 0;
-    height: 500px;
+    height: 400px;
   }
 
   .glider-next {
@@ -135,16 +131,6 @@
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
-    touch-action: manipulation;
-    
-  }
-
-  .glider-next:hover {
-    background-color: rgba(253, 241, 0, 1);
-
-    .fa {
-      color: black;
-    }
   }
 
   .glider-prev {
@@ -156,15 +142,9 @@
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
-    touch-action: manipulation;
-  }
-
-  .glider-prev:hover {
-    background-color: rgba(253, 241, 0, 1);
   }
 
   .glider-dot {
-    margin: 10px;
     width: 15px;
     height: 15px;
   }

@@ -37,10 +37,10 @@
 }
 .box6 {
   background: #e67e22;
-  background-image: url(../img/wave.svg);
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: cover;
+  // background-image: url(../img/wave.svg);
+  // background-repeat: no-repeat;
+  // background-position: bottom left;
+  // background-size: cover;
 }
 .box7 {
   background: #e74c3c;
@@ -166,9 +166,7 @@
     }
   }
   .box4 {
-    flex: 1 2 50%;
-    order: 1;
-    justify-content: space-between;
+    flex: 1 2 100%;
   }
   .box5 {
     flex: 1 2 100%;
@@ -223,8 +221,11 @@
     }
   }
   .box4 {
-    order: 7;
     flex: 1 0 100%;
+    min-width: 350px;
+    img {
+      width: 100%;
+    }
   }
   .box5 {
     order: 4;

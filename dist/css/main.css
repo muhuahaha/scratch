@@ -1315,8 +1315,6 @@ input::-moz-focus-inner {
           align-items: center;
   color: white;
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .panelHero h1,
@@ -1510,10 +1508,6 @@ input::-moz-focus-inner {
 
 .box6 {
   background: #e67e22;
-  background-image: url(../img/wave.svg);
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: cover;
 }
 
 .box7 {
@@ -1704,14 +1698,8 @@ input::-moz-focus-inner {
   }
   .box4 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 2 50%;
-            flex: 1 2 50%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+        -ms-flex: 1 2 100%;
+            flex: 1 2 100%;
   }
   .box5 {
     -webkit-box-flex: 1;
@@ -1782,12 +1770,13 @@ input::-moz-focus-inner {
     font-size: 2rem;
   }
   .box4 {
-    -webkit-box-ordinal-group: 8;
-        -ms-flex-order: 7;
-            order: 7;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
+    min-width: 350px;
+  }
+  .box4 img {
+    width: 100%;
   }
   .box5 {
     -webkit-box-ordinal-group: 5;
@@ -2323,32 +2312,19 @@ input::-moz-focus-inner {
   }
 }
 
-.slider-title {
-  position: absolute;
-  top: 100px;
-  left: 15vw;
-  text-align: left;
-  color: red;
-  background: 0;
-  z-index: 35;
-}
-
 .glider-contain {
-  width: 75% !important;
+  width: 80%;
   margin-top: 8%;
   margin-bottom: 5%;
 }
 
-.glider .slider img {
+.glider-slide img {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-.glider .slider:hover img {
+.glider-slide:hover img {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
@@ -2361,6 +2337,8 @@ input::-moz-focus-inner {
   top: 40%;
   padding: 5px;
   background-color: rgba(253, 241, 0, 0.5);
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   z-index: 13;
 }
 
@@ -2380,6 +2358,8 @@ input::-moz-focus-inner {
   top: 40%;
   padding: 5px;
   background-color: rgba(253, 241, 0, 0.5);
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   z-index: 13;
 }
 
@@ -2400,7 +2380,7 @@ input::-moz-focus-inner {
 }
 
 .dots-container {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 .glider-dot {
@@ -2446,24 +2426,19 @@ input::-moz-focus-inner {
           transform: translate(-50%, -50%);
 }
 
-@media (max-width: 767px) {
-  .slider-title {
-    position: absolute;
-    top: 1vh;
-    right: -25%;
-    z-index: 35;
-  }
+@media only screen and (max-width: 768px) {
   .glider-contain {
-    width: 100% !important;
-    margin-top: 12%;
-    margin-bottom: 15%;
+    width: 90%;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    background-color: yellow;
   }
   .glider-slide img {
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: 50% 0;
        object-position: 50% 0;
-    height: 600px;
+    height: 400px;
   }
   .glider-next {
     position: absolute;
@@ -2474,13 +2449,6 @@ input::-moz-focus-inner {
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
-    z-index: 13;
-  }
-  .glider-next:hover {
-    background-color: #fdf100;
-  }
-  .glider-next:hover .fa {
-    color: black;
   }
   .glider-prev {
     position: absolute;
@@ -2491,13 +2459,8 @@ input::-moz-focus-inner {
     padding: 5px;
     font-size: 20px;
     background-color: rgba(126, 121, 38, 0.5);
-    z-index: 13;
-  }
-  .glider-prev:hover {
-    background-color: #fdf100;
   }
   .glider-dot {
-    margin: 20px;
     width: 15px;
     height: 15px;
   }

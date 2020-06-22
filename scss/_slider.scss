@@ -65,7 +65,7 @@
 }
 
 .dots-container {
-  margin-top: 50px;
+  margin-top: 35px;
 }
 
 .glider-dot {
@@ -112,7 +112,7 @@
 
 @media (max-width: 767px) {
   .glider-contain {
-    width: 90%;
+    width: 100%;
     margin-top: 12%;
     margin-bottom: 15%;
     background-color: yellow;
@@ -121,7 +121,7 @@
   .glider-slide img {
     object-fit: cover;
     object-position: 50% 0;
-    height: 500px;
+    height: 600px;
   }
 
   .glider-next {

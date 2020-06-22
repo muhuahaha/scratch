@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-  new Glider(document.querySelector('.glider'), 
+  new Glider(document.querySelector('.glider'), {
 
     slidesToScroll: 1,
     slidesToShow: 1,

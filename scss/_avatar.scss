@@ -1,0 +1,11 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  // background: black;
+  background: rgba(255, 255, 255, 0.4);
+  clip-path: circle(43% at center);
+  transition: all 1s ease-in-out;
+  img {
+    width: 75%;
+  }
+}

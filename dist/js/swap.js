@@ -18,7 +18,7 @@ const images = [
   'img/svg/ava13.svg',
 ];
 
-const txt = ['Hallo', 'Hi', '안녕하세요', 'Hello', 'Hola'];
+const txt = ['Hallo', 'Hi', '안녕하세요', 'Hello', 'Hola', 'Moin', 'Yoo'];
 
 // function randomHover() {}
 
@@ -27,10 +27,9 @@ const test1 = document.getElementById('hover');
 test1.addEventListener('mouseenter', event => {
   const myImage = document.getElementById('hover');
   const selImage = randomPick(images);
-
   const selText = randomPick(txt);
 
-  document.getElementById('yoo').innerText = `${selText}`;
+  document.getElementById('yoo').innerText = `${selText}!`;
   myImage.src = selImage;
 });
 
@@ -40,7 +39,7 @@ test2.addEventListener('mouseleave', event => {
   const myImage = document.getElementById('hover');
   myImage.src = 'img/svg/ava01.svg';
   const selText = randomPick(txt);
-  document.getElementById('yoo').innerText = `${selText} , how do u do?`;
+  document.getElementById('yoo').innerText = `YTK ${selText}!`;
 });
 
 // const test = document.getElementById('hover');

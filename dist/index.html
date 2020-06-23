@@ -20,7 +20,7 @@
   <body>
     <header class="main-header" id="testtest">
       <div class="logo" id="logo" class="run-animation">
-        <a href="#one" class="fancy" id="logo-btn">YTK</a>
+        <a href="#one" id="logo-btn"><span id="yoo">YTK</span></a>
       </div>
 
       <input type="checkbox" class="menu-btn" id="menu-btn" />
@@ -58,40 +58,63 @@
             <time id="datum"></time>
           </div>
           <div class="box box1">
-            <div class="intro-label"><span>Feature</span></div>
-            <h1>Box1</h1>
+            <div class="box box1" id="time1">
+              <div class="intro-label">
+                <span>Guten Tag</span>
+              </div>
+              <div class="intro-text" id="testtest">
+                <h2 id="title">
+                  WHAT'S GOING ON HERE?
+                </h2>
+                <span class="line line-1"></span>
+                <p>
+                  Hey, I am Young. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Pariatur dolor accusantium maiores expedita
+                  et quia voluptas, ad vitae alias recusandae molestias culpa
+                  tempore ducimus a eius quaerat amet repellat corrupti.<br />
+                </p>
+                <code>learning:&nbsp;true</code>
+              </div>
+            </div>
           </div>
-          <div class="box box2">
-            <h2>HALLO, ICH BIN'S</h2>
-            380 00:32:01,371 --> 00:32:03,771 Was machst du für deinen Meister?
-            381 00:32:04,154 --> 00:32:05,840 Hast du nicht gehört, ich bin kein
-            Sklave 382 00:32:05,929 --> 00:32:07,105 Du bist wirklich Frei? 383
-            00:32:07,152 --> 00:32:08,352 Ja, ich bin frei 384 00:32:08,469 -->
-            00:32:10,869 Du meinst, du bist freiwillig so angezogen?
+          <div class="box box2" id="time2">
+            <!-- <h1>H1 Headline</h1> -->
+            <div class="avatar" id="ava">
+              <img id="hover" src="img/svg/ava01.svg" />
+            </div>
           </div>
           <div class="box box3">
-            <h3>Box3</h3>
-            <p>
-              <span class="line line-1"></span>This line's animation will begin
-              when it enters the viewport and finish when its top edge hits the
-              top of the viewport, staying perfectly in sync with the scrollbar
-              because it has <code>scrub:&nbsp;true</code>
-            </p>
+            <div class="box box1">
+              <div class="intro-label">
+                SKILLS
+              </div>
+              <div class="intro-text" id="time5">
+                <h3 id="title">
+                  Photoshop, Illustrator & Co
+                </h3>
+                <p>
+                  Photoshop, Illustrator, Indesign, HTML5+CSS3 JavaScript Basics
+                  UX/UI Design, E-Commerce, Produktentwicklung Amazon Ebay
+                  Retusche
+                </p>
+              </div>
+            </div>
           </div>
           <div class="box box4">
-            <h4>Box4</h4>
-            <p>
-              <span class="line line-1"></span>This line's animation will begin
-              when it enters the viewport and finish when its top edge hits the
-              top of the viewport, staying perfectly in sync with the scrollbar
-              because it has <code>scrub:&nbsp;true</code>
-            </p>
+            <div id="marquee" class="marquee">
+              <span><h5>HIRE ME!!!</h5></span>
+            </div>
           </div>
-          <div class="box box5"></div>
+          <div class="box box5">
+            <h5>
+              <span>😷</span><span>🐹</span><span>✌️</span><span>🖖</span
+              ><span>🎴</span><span>✌️</span><span>💻</span><span>🚀</span>
+            </h5>
+          </div>
         </div>
       </section>
 
-      <section id="two" class="panel portfolio black">
+      <section id="two" class="panel portfolio purple">
         <div class="containerGallery">
           <div class="box box9">
             <div class="row">
@@ -464,32 +487,32 @@
           </button>
           <div class="glider">
             <div>
-              <div class="box4">
+              <div class="box4 slider">
                 <img src="../dist/img/sky1.png" alt="" />
               </div>
             </div>
             <div>
-              <div class="box4">
+              <div class="box4 slider">
                 <img src="../dist/img/sky2.png" alt="" />
               </div>
             </div>
             <div>
-              <div class="box4">
+              <div class="box4 slider">
                 <img src="../dist/img/sky3.png" alt="" />
               </div>
             </div>
             <div>
-              <div class="box4">
+              <div class="box4 slider">
                 <img src="../dist/img/sky1.png" alt="" />
               </div>
             </div>
             <div>
-              <div class="box4">
+              <div class="box4 slider">
                 <img src="../dist/img/sky2.png" alt="" />
               </div>
             </div>
             <div>
-              <div class="box4">
+              <div class="box4 slider">
                 <img src="../dist/img/sky3.png" alt="" />
                 <div class="bottom-left">Bottom Left</div>
                 <div class="top-left">Top Left</div>
@@ -611,7 +634,7 @@
     <script src="js/rerun.js"></script>
     <script src="js/logo.js"></script>
     <script src="js/lightbox.js"></script>
-    <!-- <script src="js/swap.js"></script> -->
+    <script src="js/swap.js"></script>
     <script src="js/glider.js"></script>
     <script src="js/slider.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>

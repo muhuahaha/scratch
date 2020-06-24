@@ -429,7 +429,7 @@ input::-moz-focus-inner {
 }
 
 .portfolio .portfolio-filter button.active {
-  background: #3498db;
+  background: #c82736;
 }
 
 .portfolio .portfolio-filter button:hover {
@@ -1251,6 +1251,7 @@ input::-moz-focus-inner {
 .panel {
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   margin: auto;
   padding: 0 10vw;
   display: -webkit-box;
@@ -1425,7 +1426,7 @@ input::-moz-focus-inner {
 }
 
 .purple {
-  background-color: #8d3dae;
+  background-color: #c82736;
 }
 
 .green {
@@ -2166,6 +2167,107 @@ input::-moz-focus-inner {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+}
+
+.demo-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.demo-text .text {
+  font-size: clamp(4rem, 15vw, 8rem);
+  line-height: 1;
+  font-weight: 900;
+  color: white;
+  padding-top: 50px;
+}
+
+.dark {
+  text-align: left;
+  color: white;
+  position: relative;
+}
+
+.iTest img {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.content1 {
+  padding: 9em 11%;
+  z-index: 1;
+  position: absolute;
+}
+
+.content1 h2 {
+  font-size: 5em;
+  margin-bottom: 0;
+}
+
+.content1 p {
+  font-size: 1.6em;
+}
+
+#first {
+  background-color: #040c26;
+  height: 400vh;
+}
+
+#second {
+  background-color: #43f343;
+}
+
+.box55 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  left: 10%;
+  top: calc(50vh - 100px);
+  color: white;
+}
+
+@media all and (max-width: 767px) {
+  .box55 {
+    width: 50px;
+    height: 50px;
+    background-color: #1cff07;
+    left: 5%;
+    top: calc(50vh - 20%);
+  }
+}
+
+#container DIV .box {
+  height: 550px;
+  margin: 50px;
+  padding: 50px;
+}
+
+.demo-wrapper {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .glider-contain {

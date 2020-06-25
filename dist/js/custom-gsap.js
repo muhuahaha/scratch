@@ -78,7 +78,7 @@ const blindtext = gsap.timeline({
     // pin: true,
     start: 'top +=350',
     end: '-=500',
-    toggleActions: 'play none none none',
+    toggleActions: 'restart none none reverse',
     // markers: true,
   },
 });
@@ -93,7 +93,7 @@ blindtext
     duration: 1,
     delay: 3,
   })
-  .from('.box1', { backgroundColor: 'none', duration: 2 })
+  .to('.red', { backgroundColor: '#040c26', duration: 2 })
   .to('#test66', {
     y: 20,
     color: 'black',
@@ -154,11 +154,11 @@ console.log(tl_height);
 
 // tl fade in
 const tl_fadein = gsap.timeline();
-tl_fadein.fromTo('.box55', { autoAlpha: 1, y: '-=360' }, { autoAlpha: 1, y: 0, duration: 1 });
+tl_fadein.fromTo('.box55', { autoAlpha: 1, y: '-=500' }, { autoAlpha: 1, y: 0, duration: 1 });
 
 // tl move to right
 const tl_move = gsap.timeline();
-tl_move.fromTo('.box55', { xPercent: 500 }, { x: '+=500%', duration: 1, scale: 2, text: 'YOUNG-TAE KIM' });
+tl_move.fromTo('.box55', { xPercent: -10 }, { x: '+=500%', duration: 1, scale: 2, text: 'YOUNG-TAE KIM' });
 
 // tl rotate
 const tl_rotate = gsap.timeline();
@@ -183,7 +183,7 @@ tl_test
   .to('.box55', { backgroundColor: 'black' });
 
 const tl_moveLeft = gsap.timeline();
-tl_moveLeft.fromTo('.box55', { xPercent: 35 }, { x: '-=200%', y: '-=500', duration: 1, scale: 2, text: 'DESIGNER' });
+tl_moveLeft.fromTo('.box55', { xPercent: -10 }, { x: '-=500%', y: '+=200', duration: 1, scale: 2, text: 'DESIGNER' });
 
 ScrollTrigger.create({
   // pin element
